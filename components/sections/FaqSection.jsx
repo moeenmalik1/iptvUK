@@ -2,7 +2,7 @@ import SectionHeading from '../ui/SectionHeading';
 
 const faqs = [
   {
-    q: 'What is IPTV?',
+    q: 'What is IPTV? ',
     a: 'IPTV delivers live television and on-demand media over internet protocols rather than satellite or cable.'
   },
   {
