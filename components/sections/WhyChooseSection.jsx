@@ -5,7 +5,7 @@ const items = [
   {
     icon: '🏆',
     title: 'One of the best IPTV subscriptions for UK users',
-    description: 'Built for viewers who want dependable service quality and a premium watching experience.'
+    description: 'Built for the viewers who want dependable service quality and a premium watching experience.'
   },
   {
     icon: '🛰️',
