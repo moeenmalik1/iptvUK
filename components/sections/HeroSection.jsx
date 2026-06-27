@@ -7,44 +7,38 @@ export default function HeroSection() {
         <div>
           <p className="text-sm font-semibold uppercase tracking-[0.25em] text-orange-500">UK IPTV</p>
           <h1 className="mt-3 text-4xl font-black leading-tight text-slate-900 sm:text-5xl">
-            UK IPTV – The Best IPTV Subscription in the UK
+            IPTV UK – Premium IPTV Subscription Service for UK Viewers
           </h1>
           <h2 className="mt-4 text-xl font-bold text-slate-800 sm:text-2xl">
-            Stream UK &amp; International Channels in HD, Full HD &amp; 4K
+            Watch Live TV, Sports, Movies &amp; Series with IPTV UK
           </h2>
           <p className="mt-4 max-w-xl text-base leading-relaxed text-slate-600">
-            Welcome to UK IPTV, your trusted source for a reliable IPTV subscription in the UK. Enjoy thousands of
-            live TV channels, movies, sports, and on-demand content with smooth streaming, fast activation, and full
-            UK channel coverage.
+            Welcome to IPTV UK, your destination for premium television streaming in the United Kingdom. Enjoy access
+            to live TV channels, sports, movies, TV series, and on-demand entertainment through a reliable IPTV
+            service designed for modern viewers.
           </p>
           <p className="mt-4 max-w-xl text-base leading-relaxed text-slate-600">
-            Whether you’re looking for the best IPTV subscription, a stable UK IPTV subscription, or a premium 4K IPTV
-            subscription UK, you’re in the right place.
+            Whether you want to watch your favourite UK channels, follow live sporting events, or explore a huge
+            library of movies and series, IPTV UK provides a seamless streaming experience across multiple devices.
           </p>
           <ul className="mt-6 space-y-2 text-sm font-semibold text-slate-700">
-            <li>✔ Instant Activation</li>
-            <li>✔ UK, USA &amp; Worldwide Channels</li>
-            <li>✔ Compatible with all major devices</li>
+            <li>✔ Thousands of live TV channels</li>
+            <li>✔ Sports, movies &amp; entertainment</li>
+            <li>✔ Multi-device compatibility</li>
           </ul>
           <div className="mt-7 flex flex-wrap gap-3">
             <button className="rounded-md bg-orange-500 px-5 py-3 text-sm font-semibold text-white hover:bg-orange-600">
-              Buy IPTV Subscription Today
+              Explore IPTV UK
             </button>
           </div>
         </div>
         <div className="relative">
-            <div className="relative flex h-full w-full items-center justify-center rounded-2xl overflow-hidden">
-              <Image
-                src="/images/hero-image.png"
-                alt="UK IPTV Hero"
-                className="object-cover"
-                width={700} 
-                height={900}
-              />
-            </div>
-         
+          <div className="relative flex h-full w-full items-center justify-center overflow-hidden rounded-2xl">
+            <Image src="/images/hero-image.png" alt="IPTV UK Hero" className="object-cover" width={700} height={900} />
+          </div>
+
           <div className="absolute -bottom-5 -left-5 rounded-xl bg-white p-4 shadow-lg">
-            <p className="text-sm font-semibold text-slate-700">10,000+ Live Channels</p>
+            <p className="text-sm font-semibold text-slate-700">Reliable Streaming Technology</p>
           </div>
         </div>
       </div>

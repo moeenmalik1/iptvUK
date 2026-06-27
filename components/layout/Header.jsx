@@ -1,18 +1,31 @@
 'use client';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+
 const links = [
   { label: 'Home', href: '/' },
   { label: 'Installation Guide', href: '/installation-guide' },
-  { label: 'Services', href: '#services' },
+  { label: 'Services', href: '/#services' },
   { label: 'Pricing', href: '/pricing' },
   { label: 'Features', href: '#features' },
   { label: 'FAQ', href: '#faq' },
-  { label: 'Contact', href: '#contact' }
+  { label: 'Contact', href: '/#contact' }
 ];
 
 export default function Header() {
   const pathname = usePathname();
+
+  const resolveHref = (href) => {
+    if (href.startsWith('/#')) {
+      return href;
+    }
+
+    if (href.startsWith('#')) {
+      return pathname === '/' ? `/${href}` : `${pathname}${href}`;
+    }
+
+    return href;
+  };
 
   return (
     <header className="sticky top-0 z-20 border-b border-slate-200 bg-white/95 backdrop-blur">
@@ -26,7 +39,7 @@ export default function Header() {
         </Link>
         <nav className="hidden items-center gap-5 text-sm font-medium text-slate-600 md:flex">
           {links.map((link) => (
-            <Link key={link.label} href={link.href} className="transition hover:text-orange-500">
+            <Link key={link.label} href={resolveHref(link.href)} className="transition hover:text-orange-500">
               {link.label}
             </Link>
           ))}

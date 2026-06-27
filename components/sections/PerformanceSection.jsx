@@ -1,51 +1,51 @@
+import { BadgeCheck, BookOpen, Globe2, MonitorSmartphone, Sparkles, Trophy } from 'lucide-react';
 import FeatureCard from '../ui/FeatureCard';
 import SectionHeading from '../ui/SectionHeading';
 
 const cards = [
   {
-    icon: '🇬🇧',
-    title: 'Optimised for UK Viewers',
-    description: 'Service tuning and channel delivery designed specifically for UK local IPTV users.'
+    icon: BadgeCheck,
+    title: 'Reliable streaming performance',
+    description: 'Enjoy a smooth viewing experience designed for dependable playback.'
   },
   {
-    icon: '📺',
-    title: 'Full UK IPTV Channel Lineup',
-    description: 'Comprehensive UK channels across sports, movies, entertainment, and more.'
+    icon: BookOpen,
+    title: 'Extensive content libraries',
+    description: 'Find live TV, sports, movies, series, and on-demand entertainment in one place.'
   },
   {
-    icon: '⚡',
-    title: 'Stable UK-Based Streaming',
-    description: 'Improved stream stability for smooth playback during prime viewing hours.'
+    icon: Globe2,
+    title: 'UK-focused entertainment',
+    description: 'Built around the needs of viewers who want a UK-first service.'
   },
   {
-    icon: '💬',
-    title: 'English Support',
-    description: 'Clear, friendly support focused on helping UK customers get set up quickly.'
+    icon: MonitorSmartphone,
+    title: 'Device flexibility',
+    description: 'Works across phones, TVs, boxes, and computers.'
   },
   {
-    icon: '⏱️',
-    title: 'Fast Response Times',
-    description: 'Quick turnaround for setup help, troubleshooting, and account questions.'
+    icon: Sparkles,
+    title: 'User-friendly setup',
+    description: 'Simple activation and straightforward installation steps.'
   },
   {
-    icon: '🎯',
-    title: 'Built for the UK Market',
-    description: 'If you want the best IPTV subscription UK, this is not an overloaded global service.'
+    icon: Trophy,
+    title: 'Excellent viewing quality',
+    description: 'Experience HD, Full HD, and 4K playback across supported content.'
   }
 ];
 
 export default function PerformanceSection() {
   return (
-    <section className="bg-slate-900 py-16">
+    <section className="bg-white py-16">
       <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          title="Best IPTV Subscription for the UK Market"
-          subtitle="Focused on UK local IPTV users with dependable performance and support."
-          light
+          title="Why Viewers Choose IPTV UK"
+          subtitle="Thousands of viewers choose IPTV UK because of:"
         />
         <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {cards.map((card) => (
-            <FeatureCard key={card.title} {...card} dark />
+            <FeatureCard key={card.title} {...card} />
           ))}
         </div>
       </div>

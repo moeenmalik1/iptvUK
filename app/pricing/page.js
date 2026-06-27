@@ -1,219 +1,495 @@
+import Link from 'next/link';
 import Footer from '../../components/layout/Footer';
 import Header from '../../components/layout/Header';
 
 const plans = [
   {
-    name: 'Monthly',
+    name: '1 Month IPTV Subscription',
     price: '14.99',
     per: 'month',
-    note: 'Perfect for trying out our service',
+    note: 'Perfect for users who want flexibility.',
     features: [
-      '10,000+ Live TV Channels',
-      'Full HD & 4K Quality',
-      '7-Day Catch Up',
-      'Premium VOD Library (50,000+)',
-      'Works on Firestick & Smart TVs',
-      '24/7 Support via WhatsApp'
+      'Full Channel Access',
+      'Sports & Entertainment',
+      'Movies & Series',
+      'HD & 4K Streaming',
+      'Device Compatibility',
+      'Customer Support'
     ]
   },
   {
-    name: '3 Months',
+    name: '3 Month IPTV Subscription',
     price: '24.99',
     per: '3 months',
-    note: 'Great value for short term',
-    features: [
-      '20,000+ Live TV Channels',
-      'Full HD & 4K Quality',
-      '7-Day Catch Up',
-      'Premium VOD Library (Unlocked)',
-      'Login on 2 devices',
-      'Save over 20% monthly'
-    ]
-  },
-  {
-    name: 'Annual',
-    price: '49.99',
-    per: 'year',
-    note: 'Best value for loyal customers',
+    note: 'A popular option offering excellent value.',
     featured: true,
-    promo: '12 Months + 2 Months FREE',
     features: [
-      '26,500+ Live TV Channels',
-      'Full HD & 4K Quality',
-      '7-Day Catch Up + Recording',
-      'Premium VOD Library (Movies + Series)',
-      'Login on 3 devices',
-      'VIP 24/7 Support',
-      'Save over 40% monthly'
+      'Complete Channel Library',
+      'Premium Sports Access',
+      'Video On Demand',
+      'Stable Streaming Servers',
+      'Easy Setup'
     ]
   },
   {
-    name: 'Quarterly',
+    name: '6 Month IPTV Subscription',
     price: '34.99',
-    per: 'quarter',
-    note: 'Popular choice for commitment',
+    per: '6 months',
+    note: 'Ideal for regular viewers seeking long-term savings.',
     features: [
-      '10,000+ Live TV Channels',
-      'Full HD & 4K Quality',
-      '7-Day Catch Up & Recording',
-      'Premium VOD Library (Updated Daily)',
-      'Login on 2 devices',
-      'Family-safe support'
+      'Full IPTV Service',
+      'Live TV & Sports',
+      'Updated Content Library',
+      'Electronic Program Guide',
+      'Multi-Device Streaming'
+    ]
+  },
+  {
+    name: '12 Month IPTV Subscription',
+    price: '49.99',
+    per: '12 months',
+    note: 'Our best-value package.',
+    promo: 'Priority Support Included',
+    features: [
+      'Complete IPTV Access',
+      'Thousands of Channels',
+      'Sports, Movies & Series',
+      'Premium Streaming Quality',
+      'Priority Support'
     ]
   }
 ];
 
-const reasons = [
+const includedItems = [
+  'Thousands of Live TV Channels',
+  'UK Entertainment Channels',
+  'Premium Sports Coverage',
+  'Movies & TV Series',
+  'Video On Demand Library',
+  'HD, Full HD & 4K Streaming',
+  'Electronic Program Guide (EPG)',
+  'Multi-Device Support',
+  'Fast Channel Loading',
+  'Regular Content Updates'
+];
+
+const channelCategories = [
+  'Entertainment Channels',
+  'Sports Networks',
+  'News Channels',
+  'Kids Channels',
+  'Documentary Channels',
+  'Lifestyle Channels',
+  'Music Channels',
+  'International Channels'
+];
+
+const sports = [
+  'Football',
+  'Cricket',
+  'Rugby',
+  'Boxing',
+  'UFC',
+  'Formula 1',
+  'Tennis',
+  'Golf',
+  'International Tournaments'
+];
+
+const onDemand = [
+  'Latest Movie Releases',
+  'Popular TV Series',
+  'Action Films',
+  'Comedy Movies',
+  'Drama Collections',
+  'Family Entertainment',
+  'Documentaries'
+];
+
+const devices = [
+  'Amazon Firestick',
+  'Android TV',
+  'Smart TVs',
+  'Android Boxes',
+  'MAG Devices',
+  'iPhone & iPad',
+  'Android Smartphones',
+  'Windows PCs',
+  'Mac Computers'
+];
+
+const setupSteps = [
+  'Select your IPTV subscription plan.',
+  'Complete your order.',
+  'Receive your activation details.',
+  'Install a compatible IPTV player.',
+  'Start watching live TV, sports, movies, and series.'
+];
+
+const premiumBenefits = [
+  'HD, FHD & 4K Streaming',
+  'Electronic Program Guide',
+  'Video On Demand',
+  'Fast Channel Switching',
+  'Stable Streaming Technology',
+  'Easy Device Compatibility',
+  'Regular Updates',
+  'Customer Support'
+];
+
+const faqs = [
   {
-    title: 'NO IPTV FREEZING, NO IPTV BUFFERING',
-    body: 'Tired of interruptions? Our anti-freeze streaming and robust UK/EU servers keep your channels stable even at peak times.'
+    question: 'What Is IPTV Subscription UK?',
+    answer:
+      'An IPTV subscription provides access to television channels and on-demand content delivered over an internet connection instead of traditional broadcasting methods.'
   },
   {
-    title: 'Best IPTV UK Subscription',
-    body: 'Enjoy UK, US and international channels with movies, sports and kids content. Built for smooth daily use.'
+    question: 'Which Devices Are Supported?',
+    answer:
+      'Our IPTV subscription supports Firestick, Smart TVs, Android TV, MAG devices, smartphones, tablets, Windows PCs, and Mac computers.'
   },
   {
-    title: 'Why Choose Premium IPTV Services UK?',
-    body: 'We combine quality streaming, fast setup and reliable support, backed by a transparent 30-day guarantee.'
+    question: 'Do You Offer HD and 4K Streaming?',
+    answer:
+      'Yes. Many channels and video-on-demand titles are available in HD, Full HD, and 4K quality depending on availability.'
   },
   {
-    title: 'Best IPTV UK Subscription Provider for Firestick 2024 & More',
-    body: 'Firestick, Android, Smart TV and MAG support included. Setup takes minutes and you can start instantly.'
+    question: 'How Quickly Will I Receive My IPTV Subscription?',
+    answer: 'Activation details are typically delivered shortly after your order is completed.'
   },
   {
-    title: 'Top Quality Support',
-    body: 'Need help with setup? Our team is available 24/7 through WhatsApp and live chat to keep things running.'
+    question: 'Can I Watch Sports with IPTV?',
+    answer:
+      'Yes. IPTV subscriptions include access to a variety of sports channels covering football, cricket, boxing, UFC, Formula 1, tennis, and more.'
   },
   {
-    title: 'VPN Usage & Channel Coverage',
-    body: 'Watch securely with VPN-friendly streams and broad international channel support for sports, movies and news.'
+    question: 'Do I Need Technical Knowledge?',
+    answer: 'No. IPTV setup is straightforward, and installation guides are available for supported devices.'
   }
 ];
+
+const stats = [
+  { value: '4', label: 'Plan options' },
+  { value: '24hr', label: 'Activation target' },
+  { value: '4K', label: 'Streaming support' },
+  { value: '9+', label: 'Device types' }
+];
+
+function InfoGrid({ title, description, items }) {
+  return (
+    <div className="rounded-3xl border border-white/10 bg-slate-900/70 p-6 shadow-2xl shadow-slate-950/20 backdrop-blur sm:p-8">
+      <div className="max-w-xl">
+        <p className="text-xs font-bold uppercase tracking-[0.28em] text-orange-300">Streaming Library</p>
+        <h2 className="mt-3 text-2xl font-black text-white sm:text-3xl">{title}</h2>
+        <p className="mt-3 text-sm leading-6 text-slate-300 sm:text-base">{description}</p>
+      </div>
+      <div className="mt-6 grid gap-3 sm:grid-cols-2">
+        {items.map((item) => (
+          <div key={item} className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm font-medium text-slate-100">
+            {item}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 export default function PricingPage() {
   return (
-    <main className="bg-slate-100 text-slate-900">
-      <Header />
+    <main className="relative overflow-hidden bg-slate-950 text-slate-100">
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+        <div className="absolute left-1/2 top-0 h-96 w-96 -translate-x-1/2 rounded-full bg-orange-500/20 blur-3xl" />
+        <div className="absolute right-0 top-48 h-80 w-80 rounded-full bg-emerald-400/10 blur-3xl" />
+        <div className="absolute bottom-0 left-0 h-72 w-72 rounded-full bg-sky-400/10 blur-3xl" />
+      </div>
 
-      <section className="mx-auto w-full max-w-6xl px-4 py-14 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <h1 className="text-3xl font-black sm:text-4xl">No-Hidden-Cost Pricing</h1>
-          <p className="mx-auto mt-3 max-w-2xl text-sm text-slate-600 sm:text-base">
-            Choose the plan that works best for you. All plans include our 30-Day Money-Back Guarantee.
-          </p>
-        </div>
+      <div className="relative z-10">
+        <Header />
 
-        <div className="mx-auto mt-8 max-w-5xl rounded-xl bg-gradient-to-r from-red-500 to-orange-500 p-5 text-center text-white shadow-lg">
-          <p className="text-xl font-extrabold">⏰ Limited Time Flash Sale!</p>
-          <p className="mt-2 text-sm">Prices will return to normal after this timer ends.</p>
-          <p className="mt-2 text-3xl font-black tracking-widest">03 : 59 : 48</p>
-        </div>
+        <section className="mx-auto w-full max-w-6xl px-4 pb-10 pt-12 sm:px-6 lg:px-8 lg:pb-16 lg:pt-16">
+          <div className="grid gap-10 lg:grid-cols-[1.25fr_0.75fr] lg:items-center">
+            <div>
+              <p className="inline-flex items-center rounded-full border border-orange-400/30 bg-orange-500/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.28em] text-orange-200">
+                Pricing built for fast setup
+              </p>
+              <h1 className="mt-5 max-w-3xl text-4xl font-black tracking-tight text-white sm:text-5xl lg:text-6xl">
+                IPTV Subscription UK plans with a clearer, cleaner buying experience.
+              </h1>
+              <p className="mt-5 max-w-2xl text-base leading-7 text-slate-300 sm:text-lg">
+                Looking for a reliable IPTV Subscription UK service? IPTV UK provides premium IPTV subscriptions with
+                access to thousands of live TV channels, sports networks, movies, TV series, and video-on-demand
+                content. Enjoy high-quality streaming on your favourite devices with fast activation and an easy setup
+                process.
+              </p>
+              <p className="mt-4 max-w-2xl text-base leading-7 text-slate-300 sm:text-lg">
+                Whether you want UK television channels, international entertainment, premium sports coverage, or
+                family-friendly content, our IPTV subscription plans are designed to meet your viewing needs.
+              </p>
 
-        <div className="mt-10 grid gap-5 lg:grid-cols-4">
-          {plans.map((plan) => (
-            <article
-              key={plan.name}
-              className={`relative flex h-full flex-col rounded-xl border bg-white p-6 shadow-md ${
-                plan.featured ? 'border-orange-500 ring-2 ring-orange-300' : 'border-slate-200'
-              }`}
-            >
-              {plan.featured ? (
-                <span className="absolute -top-3 right-4 rounded-full bg-orange-500 px-3 py-1 text-xs font-bold text-white">
-                  Popular
-                </span>
-              ) : null}
-              <p className="text-lg font-bold text-slate-800">{plan.name}</p>
-              <p className="mt-2 text-4xl font-black">£{plan.price}</p>
-              <p className="text-sm text-slate-500">per {plan.per}</p>
-              <p className="mt-4 text-sm text-slate-500">{plan.note}</p>
-              {plan.promo ? (
-                <p className="mt-3 rounded-lg border border-red-200 bg-red-50 px-3 py-2 text-sm font-semibold text-red-600">
-                  {plan.promo}
+              <div className="mt-8 flex flex-wrap gap-3">
+                <Link
+                  href="#plans"
+                  className="rounded-full bg-orange-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-orange-500/30 transition hover:bg-orange-600"
+                >
+                  View Plans
+                </Link>
+                <Link
+                  href="/installation-guide"
+                  className="rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+                >
+                  Setup Guide
+                </Link>
+              </div>
+            </div>
+
+            <div className="rounded-[2rem] border border-white/10 bg-white/10 p-6 shadow-2xl shadow-slate-950/30 backdrop-blur-xl sm:p-8">
+              <div className="rounded-[1.5rem] bg-slate-950/60 p-6 ring-1 ring-white/10">
+                <p className="text-sm font-bold uppercase tracking-[0.25em] text-orange-300">Best value today</p>
+                <p className="mt-4 text-5xl font-black text-white">£24.99</p>
+                <p className="mt-1 text-sm text-slate-300">Featured 3 month subscription</p>
+                <p className="mt-4 text-sm leading-6 text-slate-300">
+                  A balanced plan for viewers who want strong value, premium sports access, and a smooth setup.
                 </p>
-              ) : null}
-              <ul className="mt-5 flex-1 space-y-2 text-sm text-slate-600">
-                {plan.features.map((item) => (
-                  <li key={item} className="flex gap-2">
-                    <span className="font-bold text-emerald-500">✓</span>
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-              <button className="mt-6 rounded-md bg-orange-500 px-4 py-2 text-sm font-semibold text-white transition hover:bg-orange-600">
-                Get Started
-              </button>
-            </article>
-          ))}
-        </div>
-
-        <div className="mt-8 rounded-xl border border-emerald-200 bg-white p-5 text-center shadow-sm">
-          <p className="font-semibold text-emerald-700">Secure Payment Options</p>
-          <div className="mt-3 flex flex-wrap items-center justify-center gap-4 text-sm text-slate-600">
-            <span>💳 Card Payments</span>
-            <span>🅿️ PayPal</span>
-            <span>🏦 Bank Transfer</span>
+                <div className="mt-6 grid gap-3 sm:grid-cols-2">
+                  {stats.map((stat) => (
+                    <div key={stat.label} className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3">
+                      <p className="text-2xl font-black text-white">{stat.value}</p>
+                      <p className="text-xs font-medium uppercase tracking-[0.2em] text-slate-400">{stat.label}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section className="mx-auto w-full max-w-6xl px-4 pb-14 sm:px-6 lg:px-8">
-        <div className="rounded-2xl bg-white p-6 shadow-lg">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-orange-500">Hardware Solutions</p>
-          <h2 className="mt-2 text-3xl font-black">Fully Loaded 4K Amazon Firestick</h2>
-          <p className="mt-3 max-w-3xl text-slate-600">
-            Don&apos;t have a smart TV? Get our all-in-one hardware bundle delivered to your door, pre-configured and
-            ready to stream in minutes.
-          </p>
-          <div className="mt-4 grid gap-4 text-sm text-slate-700 sm:grid-cols-2">
-            <div className="rounded-lg bg-slate-100 p-4">⚡ 4K Ultra HD Streaming + Wi-Fi Optimized</div>
-            <div className="rounded-lg bg-slate-100 p-4">🎬 Premium Movies, Sports, and Entertainment Packs</div>
-            <div className="rounded-lg bg-slate-100 p-4">🚚 Fast UK Delivery + Setup Guide Included</div>
-            <div className="rounded-lg bg-slate-100 p-4">🔒 Secure Payment + Free Delivery Offer</div>
+        <section className="mx-auto w-full max-w-6xl px-4 pb-10 sm:px-6 lg:px-8">
+          <div className="grid gap-4 rounded-3xl border border-white/10 bg-white/5 p-5 shadow-2xl shadow-slate-950/20 sm:grid-cols-2 lg:grid-cols-4 lg:p-6">
+            {[
+              'Thousands of live channels',
+              'Sports, movies, and series',
+              'HD, FHD, and 4K quality',
+              'Multi-device support'
+            ].map((item) => (
+              <div key={item} className="rounded-2xl border border-white/10 bg-slate-950/40 px-4 py-4 text-sm font-semibold text-slate-100">
+                {item}
+              </div>
+            ))}
           </div>
-          <button className="mt-6 rounded-md bg-slate-900 px-5 py-2 text-sm font-semibold text-white">Order Now - Free Delivery</button>
-        </div>
-      </section>
+        </section>
 
-      <section className="mx-auto w-full max-w-6xl px-4 pb-14 sm:px-6 lg:px-8">
-        <div className="rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-700 px-6 py-12 text-center text-white shadow-lg">
-          <h2 className="text-3xl font-black">Ready for a Longer Test Drive?</h2>
-          <p className="mx-auto mt-3 max-w-3xl text-blue-100">
-            Experience the full power of IPTV with our exclusive 24-hour free trial. Access live channels, VOD, and
-            premium features with no obligation.
-          </p>
-          <button className="mt-6 rounded-md bg-white px-5 py-2 text-sm font-semibold text-blue-700">Request 24Hr Trial Now</button>
-        </div>
-      </section>
+        <section id="plans" className="mx-auto w-full max-w-6xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
+          <div className="text-center">
+            <p className="text-xs font-bold uppercase tracking-[0.28em] text-orange-300">Subscription options</p>
+            <h2 className="mt-3 text-3xl font-black text-white sm:text-4xl">IPTV Subscription Plans</h2>
+            <p className="mx-auto mt-4 max-w-2xl text-sm leading-6 text-slate-300 sm:text-base">
+              Choose the package that best suits your requirements.
+            </p>
+          </div>
 
-      <section className="bg-orange-500 px-4 py-16 text-white sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl font-black">Our 30-Day Money-Back Guarantee</h2>
-          <p className="mt-4 text-orange-50">
-            We are confident you will love our IPTV. However, if you are not completely satisfied within the first 30
-            days, we&apos;ll give you a full refund. No hidden terms. Your satisfaction is our priority.
-          </p>
-        </div>
-      </section>
-
-      <section className="bg-slate-950 px-4 py-16 text-slate-200 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-6xl">
-          <h2 className="text-center text-3xl font-black text-white">Experience Unmatched IPTV Performance</h2>
-          <p className="mx-auto mt-3 max-w-3xl text-center text-slate-400">
-            Discover why premium IPTV is the preferred choice for viewers across the UK. We are committed to delivering
-            a smooth, high-quality streaming experience.
-          </p>
-          <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {reasons.map((reason) => (
-              <article key={reason.title} className="rounded-xl border border-slate-800 bg-slate-900 p-5">
-                <h3 className="text-base font-bold text-white">{reason.title}</h3>
-                <p className="mt-2 text-sm text-slate-400">{reason.body}</p>
+          <div className="mt-10 grid gap-5 lg:grid-cols-4">
+            {plans.map((plan) => (
+              <article
+                key={plan.name}
+                className={`relative flex h-full flex-col rounded-[1.75rem] border p-6 shadow-2xl shadow-slate-950/20 transition duration-300 hover:-translate-y-1 hover:shadow-orange-500/10 sm:p-7 ${
+                  plan.featured
+                    ? 'border-orange-400/50 bg-gradient-to-b from-white to-orange-50 text-slate-900 ring-1 ring-orange-300/60 lg:scale-[1.03]'
+                    : 'border-white/10 bg-white/95 text-slate-900'
+                }`}
+              >
+                {plan.featured ? (
+                  <span className="absolute -top-3 right-5 rounded-full bg-orange-500 px-3 py-1 text-xs font-bold uppercase tracking-[0.18em] text-white shadow-lg shadow-orange-500/30">
+                    Popular
+                  </span>
+                ) : null}
+                <p className={`text-xs font-bold uppercase tracking-[0.24em] ${plan.featured ? 'text-orange-600' : 'text-slate-500'}`}>
+                  {plan.per}
+                </p>
+                <p className="mt-3 text-xl font-black leading-tight">{plan.name}</p>
+                <div className="mt-5 flex items-end gap-1">
+                  <span className="text-4xl font-black tracking-tight">GBP {plan.price}</span>
+                </div>
+                <p className={`mt-1 text-sm ${plan.featured ? 'text-slate-600' : 'text-slate-500'}`}>Billed per {plan.per}</p>
+                <p className={`mt-4 text-sm leading-6 ${plan.featured ? 'text-slate-700' : 'text-slate-600'}`}>{plan.note}</p>
+                {plan.promo ? (
+                  <p className="mt-4 rounded-2xl border border-orange-200 bg-orange-50 px-4 py-3 text-sm font-semibold text-orange-700">
+                    {plan.promo}
+                  </p>
+                ) : null}
+                <ul className="mt-6 flex-1 space-y-3 text-sm text-slate-600">
+                  {plan.features.map((item) => (
+                    <li key={item} className="flex gap-3">
+                      <span className="mt-0.5 text-emerald-500">✓</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+                <button
+                  className={`mt-7 rounded-full px-5 py-3 text-sm font-semibold transition ${
+                    plan.featured
+                      ? 'bg-slate-900 text-white hover:bg-slate-800'
+                      : 'bg-orange-500 text-white hover:bg-orange-600'
+                  }`}
+                >
+                  Get Started
+                </button>
               </article>
             ))}
           </div>
-        </div>
-      </section>
+        </section>
 
-      <Footer />
+        <section id="features" className="mx-auto w-full max-w-6xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
+          <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+            <div className="rounded-3xl border border-white/10 bg-white/95 p-6 text-slate-900 shadow-2xl shadow-slate-950/20 sm:p-8">
+              <p className="text-xs font-bold uppercase tracking-[0.28em] text-orange-500">What&apos;s included</p>
+              <h2 className="mt-3 text-2xl font-black sm:text-3xl">Everything you need in one subscription</h2>
+              <p className="mt-3 text-sm leading-6 text-slate-600 sm:text-base">
+                With IPTV UK, you can enjoy uninterrupted entertainment from virtually anywhere with a stable internet
+                connection.
+              </p>
+              <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                {includedItems.map((item) => (
+                  <div key={item} className="rounded-2xl bg-slate-50 px-4 py-3 text-sm font-semibold text-slate-700">
+                    {item}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="rounded-3xl border border-white/10 bg-white/10 p-6 shadow-2xl shadow-slate-950/20 backdrop-blur sm:p-8">
+              <p className="text-xs font-bold uppercase tracking-[0.28em] text-orange-300">Why choose us</p>
+              <h2 className="mt-3 text-2xl font-black text-white sm:text-3xl">A premium streaming experience</h2>
+              <p className="mt-3 text-sm leading-6 text-slate-300 sm:text-base">
+                Our service delivers a complete entertainment experience with a wide range of channels and on-demand
+                content.
+              </p>
+              <div className="mt-6 grid gap-3">
+                {[
+                  'Fast channel loading',
+                  'Stable streaming servers',
+                  'Priority support on longer plans',
+                  'Regular content updates'
+                ].map((item) => (
+                  <div key={item} className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm font-medium text-slate-100">
+                    {item}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="mx-auto w-full max-w-6xl px-4 pb-10 sm:px-6 lg:px-8 lg:pb-14">
+          <div className="grid gap-6 lg:grid-cols-2">
+            <InfoGrid
+              title="Live TV Channels"
+              description="Our IPTV subscription includes access to a broad range of live television channels."
+              items={channelCategories}
+            />
+            <InfoGrid
+              title="Sports IPTV Coverage"
+              description="Sports fans can enjoy extensive coverage of major sporting events throughout the year."
+              items={sports}
+            />
+          </div>
+        </section>
+
+        <section className="mx-auto w-full max-w-6xl px-4 pb-10 sm:px-6 lg:px-8 lg:pb-14">
+          <div className="grid gap-6 lg:grid-cols-2">
+            <InfoGrid
+              title="Movies & TV Shows On Demand"
+              description="In addition to live television, IPTV UK provides a growing on-demand library."
+              items={onDemand}
+            />
+            <InfoGrid
+              title="Compatible Devices"
+              description="Our IPTV subscription works across a wide range of devices."
+              items={devices}
+            />
+          </div>
+        </section>
+
+        <section className="mx-auto w-full max-w-6xl px-4 pb-10 sm:px-6 lg:px-8 lg:pb-14">
+          <div className="grid gap-6 lg:grid-cols-[0.85fr_1.15fr]">
+            <div className="rounded-3xl border border-white/10 bg-gradient-to-br from-slate-900 to-slate-800 p-6 shadow-2xl shadow-slate-950/30 sm:p-8">
+              <p className="text-xs font-bold uppercase tracking-[0.28em] text-orange-300">Easy setup</p>
+              <h2 className="mt-3 text-2xl font-black text-white sm:text-3xl">Get started in a few simple steps</h2>
+              <div className="mt-6 space-y-4">
+                {setupSteps.map((step, index) => (
+                  <div key={step} className="flex gap-4 rounded-2xl bg-white/5 px-4 py-3 ring-1 ring-white/10">
+                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-orange-500 text-sm font-bold text-white shadow-lg shadow-orange-500/30">
+                      {index + 1}
+                    </span>
+                    <span className="pt-1 text-sm leading-6 text-slate-200">{step}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="rounded-3xl border border-white/10 bg-white/95 p-6 text-slate-900 shadow-2xl shadow-slate-950/20 sm:p-8">
+              <p className="text-xs font-bold uppercase tracking-[0.28em] text-orange-500">Premium benefits</p>
+              <h2 className="mt-3 text-2xl font-black sm:text-3xl">Built for everyday streaming</h2>
+              <p className="mt-3 text-sm leading-6 text-slate-600 sm:text-base">
+                Every subscription includes premium features designed to improve your viewing experience.
+              </p>
+              <div className="mt-6 grid gap-3 sm:grid-cols-2">
+                {premiumBenefits.map((item) => (
+                  <div key={item} className="rounded-2xl bg-slate-50 px-4 py-3 text-sm font-semibold text-slate-700">
+                    ✓ {item}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="faq" className="mx-auto w-full max-w-6xl px-4 pb-10 sm:px-6 lg:px-8 lg:pb-14">
+          <div className="rounded-3xl border border-white/10 bg-white/95 p-6 text-slate-900 shadow-2xl shadow-slate-950/20 sm:p-8">
+            <h2 className="text-center text-3xl font-black">Frequently Asked Questions</h2>
+            <div className="mt-8 space-y-3">
+              {faqs.map((faq) => (
+                <details key={faq.question} className="group rounded-2xl border border-slate-200 bg-slate-50 p-4">
+                  <summary className="cursor-pointer list-none text-sm font-semibold text-slate-800">
+                    {faq.question}
+                  </summary>
+                  <p className="mt-3 text-sm leading-6 text-slate-600">{faq.answer}</p>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
+          <div className="mx-auto max-w-5xl rounded-[2rem] border border-orange-400/20 bg-gradient-to-r from-orange-500 to-slate-900 p-8 text-center shadow-2xl shadow-orange-950/20 sm:p-12">
+            <h2 className="text-3xl font-black text-white sm:text-4xl">Why IPTV UK?</h2>
+            <p className="mx-auto mt-4 max-w-3xl text-sm leading-6 text-orange-50 sm:text-base">
+              IPTV UK is committed to providing a reliable IPTV subscription experience with extensive content options,
+              broad device compatibility, and premium streaming quality. Whether you enjoy live television, sports,
+              movies, or on-demand entertainment, our service offers a convenient way to access your favourite content.
+            </p>
+            <p className="mx-auto mt-4 max-w-3xl text-sm leading-6 text-orange-50 sm:text-base">
+              Choose an IPTV subscription plan today and enjoy premium entertainment designed for viewers across the
+              United Kingdom.
+            </p>
+            <div className="mt-8 flex flex-wrap justify-center gap-3">
+              <Link
+                href="#plans"
+                className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-slate-900 transition hover:bg-orange-50"
+              >
+                Choose a Plan
+              </Link>
+              <Link
+                href="/installation-guide"
+                className="rounded-full border border-white/25 bg-white/10 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/15"
+              >
+                Read the Guide
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        <Footer />
+      </div>
     </main>
   );
 }

@@ -1,4 +1,4 @@
-export default function FeatureCard({ icon, title, description, dark = false }) {
+export default function FeatureCard({ icon: Icon, title, description, dark = false }) {
   return (
     <article
       className={`rounded-xl border p-5 shadow-sm transition hover:-translate-y-0.5 ${
@@ -8,11 +8,11 @@ export default function FeatureCard({ icon, title, description, dark = false }) 
       }`}
     >
       <div
-        className={`mb-3 inline-flex h-9 w-9 items-center justify-center rounded-full text-sm font-bold ${
+        className={`mb-3 inline-flex h-10 w-10 items-center justify-center rounded-full ${
           dark ? 'bg-orange-500/20 text-orange-300' : 'bg-orange-100 text-orange-500'
         }`}
       >
-        {icon}
+        {Icon ? <Icon className="h-5 w-5" aria-hidden="true" /> : null}
       </div>
       <h3 className={`text-base font-bold ${dark ? 'text-white' : 'text-slate-900'}`}>{title}</h3>
       <p className={`mt-2 text-sm leading-relaxed ${dark ? 'text-slate-300' : 'text-slate-500'}`}>

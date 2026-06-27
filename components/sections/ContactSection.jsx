@@ -1,5 +1,6 @@
 'use client';
 
+import { Clock3, Mail, MessageCircle, Phone } from 'lucide-react';
 import { useMemo, useState } from 'react';
 
 const contactDetails = [
@@ -7,32 +8,19 @@ const contactDetails = [
     title: 'Email Us',
     value: 'contact@iptvuk.it.com',
     note: 'Available 24/7',
-    icon: (
-      <svg className="h-7 w-7 text-orange-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-        <path d="M4 6h16v12H4z" />
-        <path d="m4 8 8 6 8-6" />
-      </svg>
-    )
+    icon: Mail
   },
   {
     title: 'Call Us',
     value: '+447453598130',
     note: 'Available 24/7',
-    icon: (
-      <svg className="h-7 w-7 text-orange-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.2 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.32 1.79.59 2.63a2 2 0 0 1-.45 2.11L8 9.91a16 16 0 0 0 6.09 6.09l1.45-1.25a2 2 0 0 1 2.11-.45c.84.27 1.73.47 2.63.59a2 2 0 0 1 1.72 1.99Z" />
-      </svg>
-    )
+    icon: Phone
   },
   {
     title: 'Live Chat',
     value: 'Available on our website',
     note: 'Response time: Under 5 minutes',
-    icon: (
-      <svg className="h-7 w-7 text-orange-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-        <path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z" />
-      </svg>
-    )
+    icon: MessageCircle
   }
 ];
 
@@ -43,7 +31,10 @@ export default function ContactSection() {
   const [message, setMessage] = useState('');
 
   const whatsappHref = useMemo(() => {
-    const whatsappMessage = `Hello, my name is ${name || '[Your Name]'}\nEmail: ${email || '[Your Email]'}\nSubject: ${subject || '[Subject]'}\nMessage: ${message || '[Your message]'}`;
+    const whatsappMessage = `Hello, my name is ${name || '[Your Name]'}
+Email: ${email || '[Your Email]'}
+Subject: ${subject || '[Subject]'}
+Message: ${message || '[Your message]'}`;
     return `https://wa.me/447453598130?text=${encodeURIComponent(whatsappMessage)}`;
   }, [name, email, subject, message]);
 
@@ -54,22 +45,27 @@ export default function ContactSection() {
           <h2 className="text-4xl font-extrabold text-slate-900">Get in Touch</h2>
 
           <div className="mt-9 space-y-8 text-slate-700">
-            {contactDetails.map((item) => (
-              <div key={item.title} className="flex gap-4">
-                <div className="mt-1">{item.icon}</div>
-                <div>
-                  <h3 className="text-3xl font-bold text-slate-900">{item.title}</h3>
-                  <p className="mt-2 text-2xl">{item.value}</p>
-                  <p className="mt-1 text-2xl">{item.note}</p>
+            {contactDetails.map((item) => {
+              const Icon = item.icon;
+              return (
+                <div key={item.title} className="flex gap-4">
+                  <div className="mt-1 text-orange-500">
+                    <Icon className="h-7 w-7" aria-hidden="true" />
+                  </div>
+                  <div>
+                    <h3 className="text-3xl font-bold text-slate-900">{item.title}</h3>
+                    <p className="mt-2 text-2xl">{item.value}</p>
+                    <p className="mt-1 text-2xl">{item.note}</p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
 
           <div className="mt-10">
             <h3 className="text-4xl font-extrabold text-slate-900">Our Hours</h3>
             <ul className="mt-4 space-y-1 text-2xl text-slate-700">
-              <li>Customer Support: 24/7</li>
+              <li className="flex items-center gap-2"><Clock3 className="h-5 w-5 text-orange-500" aria-hidden="true" />Customer Support: 24/7</li>
               <li>Sales Department: Mon-Fri, 9am-6pm GMT</li>
               <li>Technical Support: 24/7</li>
             </ul>
