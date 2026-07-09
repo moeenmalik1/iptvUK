@@ -1,21 +1,70 @@
-const columns = {
-  'IPTV UK': ['About Us', 'Service Status', 'Reviews', 'Affiliate'],
-  'Quick Links': ['Pricing', 'Free Trial', 'Setup Guide', 'Contact'],
-  Legal: ['Terms & Conditions', 'Privacy Policy', 'Refund Policy', 'Cookies'],
-  Support: ['Help Center', 'WhatsApp', 'Email Support', 'Ticket Portal']
-};
+import Link from 'next/link';
+
+const columns = [
+  {
+    title: 'IPTV UK',
+    links: [
+      { label: 'About Us', href: '/#services' },
+      { label: 'Service Status', href: '/status' },
+      { label: 'Reviews', href: '/#reviews' }
+    ]
+  },
+  {
+    title: 'Quick Links',
+    links: [
+      { label: 'Pricing', href: '/pricing' },
+      { label: 'Free Trial', href: '/pricing#plans' },
+      { label: 'Channels', href: '/channels' },
+      { label: 'Setup Guide', href: '/installation-guide' },
+      { label: 'Contact', href: '/#contact' }
+    ]
+  },
+  {
+    title: 'Legal',
+    links: [
+      { label: 'Terms & Conditions', href: '/terms' },
+      { label: 'Privacy Policy', href: '/privacy' },
+      { label: 'Refund Policy', href: '/refund' },
+      { label: 'Cookies', href: '/cookies' }
+    ]
+  },
+  {
+    title: 'Support',
+    links: [
+      { label: 'Help Center', href: '/#faq' },
+      { label: 'WhatsApp', href: 'https://wa.me/447453598130' },
+      { label: 'Email Support', href: 'mailto:contact@iptvuk.it.com' },
+      { label: 'Ticket Portal', href: '/#contact' }
+    ]
+  }
+];
 
 export default function Footer() {
   return (
     <footer className="bg-slate-950 py-12 text-slate-300">
       <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-8 md:grid-cols-4">
-          {Object.entries(columns).map(([title, links]) => (
-            <div key={title}>
-              <h4 className="text-sm font-bold uppercase tracking-[0.2em] text-white">{title}</h4>
+          {columns.map((column) => (
+            <div key={column.title}>
+              <h4 className="text-sm font-bold uppercase tracking-[0.2em] text-white">{column.title}</h4>
               <ul className="mt-4 space-y-2 text-sm text-slate-400">
-                {links.map((link) => (
-                  <li key={link}>{link}</li>
+                {column.links.map((link) => (
+                  <li key={link.label}>
+                    {link.href.startsWith('http') || link.href.startsWith('mailto') ? (
+                      <a 
+                        href={link.href} 
+                        target={link.href.startsWith('http') ? '_blank' : undefined} 
+                        rel="noreferrer"
+                        className="transition hover:text-orange-400"
+                      >
+                        {link.label}
+                      </a>
+                    ) : (
+                      <Link href={link.href} className="transition hover:text-orange-400">
+                        {link.label}
+                      </Link>
+                    )}
+                  </li>
                 ))}
               </ul>
             </div>
