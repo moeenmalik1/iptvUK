@@ -1,6 +1,6 @@
 export const plans = [
   {
-    name: '12 Month IPTV Subscription',
+    name: 'Ultimate Plan',
     price: '49.99',
     per: '12 months',
     note: 'Our best-value package.',
@@ -15,7 +15,7 @@ export const plans = [
     ]
   },
   {
-    name: '6 Month IPTV Subscription',
+    name: 'Pro Plan',
     price: '34.99',
     per: '6 months',
     note: 'Ideal for regular viewers seeking long-term savings.',
@@ -28,7 +28,7 @@ export const plans = [
     ]
   },
   {
-    name: '3 Month IPTV Subscription',
+    name: 'Value Plan',
     price: '24.99',
     per: '3 months',
     note: 'A popular option offering excellent value.',
@@ -41,9 +41,9 @@ export const plans = [
     ]
   },
   {
-    name: '1 Month IPTV Subscription',
+    name: 'Starter Plan',
     price: '14.99',
-    per: 'month',
+    per: '1 month',
     note: 'Perfect for users who want flexibility.',
     features: [
       'Full Channel Access',
