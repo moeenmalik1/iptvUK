@@ -139,6 +139,8 @@ function InfoGrid({ title, description, items }) {
 }
 
 export default function PricingPage() {
+  const featuredPlan = plans.find((plan) => plan.featured) ?? plans[0];
+
   return (
     <main className="relative overflow-hidden bg-slate-950 text-slate-100">
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
@@ -189,11 +191,9 @@ export default function PricingPage() {
             <div className="rounded-[2rem] border border-white/10 bg-white/10 p-6 shadow-2xl shadow-slate-950/30 backdrop-blur-xl sm:p-8">
               <div className="rounded-[1.5rem] bg-slate-950/60 p-6 ring-1 ring-white/10">
                 <p className="text-sm font-bold uppercase tracking-[0.25em] text-orange-300">Best value today</p>
-                <p className="mt-4 text-5xl font-black text-white">£24.99</p>
-                <p className="mt-1 text-sm text-slate-300">Featured 3 month subscription</p>
-                <p className="mt-4 text-sm leading-6 text-slate-300">
-                  A balanced plan for viewers who want strong value, premium sports access, and a smooth setup.
-                </p>
+                <p className="mt-4 text-5xl font-black text-white">£{featuredPlan.price}</p>
+                <p className="mt-1 text-sm text-slate-300">{featuredPlan.name} &middot; {featuredPlan.per}</p>
+                <p className="mt-4 text-sm leading-6 text-slate-300">{featuredPlan.note}</p>
                 <div className="mt-6 grid gap-3 sm:grid-cols-2">
                   {stats.map((stat) => (
                     <div key={stat.label} className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3">
