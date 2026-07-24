@@ -1,4 +1,5 @@
 import { getWhatsAppLink } from '../../lib/whatsapp';
+import { faqs } from '../../data/faqs';
 
 const deviceKeyWhatsAppHref = getWhatsAppLink(
   "Hi, I need help setting up my IPTV UK subscription. Here's my MAC address and Device Key: "
@@ -198,32 +199,6 @@ const benefits = [
   'Reliable IPTV Service',
   'Regular Channel Updates',
   'Excellent Customer Support'
-];
-
-const faqs = [
-  {
-    question: 'How to Setup IPTV UK?',
-    answer:
-      'Choose an IPTV subscription, install a compatible IPTV player, enter your login details, and load your channels. Most users can complete setup within a few minutes.'
-  },
-  {
-    question: 'What Is the Best IPTV App?',
-    answer:
-      'Popular choices include IPTV Smarters Pro, TiviMate, XCIPTV, and IBO Player. The best IPTV app depends on your device and preferences.'
-  },
-  {
-    question: 'Can I Use IPTV UK on Multiple Devices?',
-    answer: 'Compatibility depends on your subscription package. Contact support for available options.'
-  },
-  {
-    question: 'Is IPTV Easy to Install?',
-    answer: 'Yes. Most IPTV players support simple setup using Xtream Codes or M3U playlists.'
-  },
-  {
-    question: 'How Do I Fix IPTV Buffering UK?',
-    answer:
-      'Check your internet connection, update your IPTV app, restart your device, and use a wired connection whenever possible.'
-  }
 ];
 
 const heroDevices = ['Firestick', 'Smart TV', 'Android TV', 'iPhone', 'Windows', 'MAG Box'];

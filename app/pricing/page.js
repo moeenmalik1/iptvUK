@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Footer from '../../components/layout/Footer';
 import Header from '../../components/layout/Header';
 import { plans } from '../../data/plans';
+import { faqs } from '../../data/faqs';
 import { getWhatsAppLink } from '../../lib/whatsapp';
 
 const includedItems = [
@@ -79,37 +80,6 @@ const premiumBenefits = [
   'Easy Device Compatibility',
   'Regular Updates',
   'Customer Support'
-];
-
-const faqs = [
-  {
-    question: 'What Is IPTV Subscription UK?',
-    answer:
-      'An IPTV subscription provides access to television channels and on-demand content delivered over an internet connection instead of traditional broadcasting methods.'
-  },
-  {
-    question: 'Which Devices Are Supported?',
-    answer:
-      'Our IPTV subscription supports Firestick, Smart TVs, Android TV, MAG devices, smartphones, tablets, Windows PCs, and Mac computers.'
-  },
-  {
-    question: 'Do You Offer HD and 4K Streaming?',
-    answer:
-      'Yes. Many channels and video-on-demand titles are available in HD, Full HD, and 4K quality depending on availability.'
-  },
-  {
-    question: 'How Quickly Will I Receive My IPTV Subscription?',
-    answer: 'Activation details are typically delivered shortly after your order is completed.'
-  },
-  {
-    question: 'Can I Watch Sports with IPTV?',
-    answer:
-      'Yes. IPTV subscriptions include access to a variety of sports channels covering football, cricket, boxing, UFC, Formula 1, tennis, and more.'
-  },
-  {
-    question: 'Do I Need Technical Knowledge?',
-    answer: 'No. IPTV setup is straightforward, and installation guides are available for supported devices.'
-  }
 ];
 
 const stats = [
