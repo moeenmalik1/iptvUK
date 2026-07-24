@@ -1,5 +1,5 @@
 import SectionHeading from '../ui/SectionHeading';
-import { faqs } from '../../data/faqs';
+import { homeFaqs as faqs } from '../../data/faqs';
 
 export default function FaqSection() {
   return (

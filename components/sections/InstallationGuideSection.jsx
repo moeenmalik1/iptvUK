@@ -1,5 +1,5 @@
 import { getWhatsAppLink } from '../../lib/whatsapp';
-import { faqs } from '../../data/faqs';
+import { installationFaqs as faqs } from '../../data/faqs';
 
 const deviceKeyWhatsAppHref = getWhatsAppLink(
   "Hi, I need help setting up my IPTV UK subscription. Here's my MAC address and Device Key: "

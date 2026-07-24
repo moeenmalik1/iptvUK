@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Footer from '../../components/layout/Footer';
 import Header from '../../components/layout/Header';
 import { plans } from '../../data/plans';
-import { faqs } from '../../data/faqs';
+import { pricingFaqs as faqs } from '../../data/faqs';
 import { getWhatsAppLink } from '../../lib/whatsapp';
 
 const includedItems = [
