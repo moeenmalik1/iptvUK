@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { getWhatsAppLink } from '../../lib/whatsapp';
 
 export default function HeroSection() {
-  const trialWhatsAppHref = getWhatsAppLink("Hi, I'd like to claim my 24 Hours Free Trial for IPTV UK.");
+  const trialWhatsAppHref = getWhatsAppLink("Hi, I'd like to claim my 24 Hours Free Trial.");
 
   return (
     <section className="bg-slate-100 py-14">

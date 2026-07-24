@@ -215,7 +215,7 @@ export default function ChannelsPage() {
                   View Plans & Pricing
                 </Link>
                 <a
-                  href={getWhatsAppLink("Hi, I'd like to claim my 24 Hours Free Trial for IPTV UK.")}
+                  href={getWhatsAppLink("Hi, I'd like to claim my 24 Hours Free Trial.")}
                   target="_blank"
                   rel="noreferrer"
                   className="px-5 py-3 rounded-full border border-slate-700 bg-slate-950/60 hover:bg-slate-900 text-slate-300 font-semibold text-sm transition"

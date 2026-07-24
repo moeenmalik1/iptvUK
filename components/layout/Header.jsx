@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
 import { getWhatsAppLink } from '../../lib/whatsapp';
 
-const trialWhatsAppHref = getWhatsAppLink("Hi, I'd like to claim my 24 Hours Free Trial for IPTV UK.");
+const trialWhatsAppHref = getWhatsAppLink("Hi, I'd like to claim my 24 Hours Free Trial.");
 
 const links = [
   { label: 'Home', href: '/' },
