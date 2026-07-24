@@ -1,3 +1,14 @@
+import { getWhatsAppLink } from '../../lib/whatsapp';
+
+const deviceKeyWhatsAppHref = getWhatsAppLink(
+  "Hi, I need help setting up my IPTV UK subscription. Here's my MAC address and Device Key: "
+);
+const macWhatsAppHref = getWhatsAppLink(
+  "Hi, I need help setting up my IPTV UK subscription. Here's my MAG box MAC address: "
+);
+
+const whatsAppLinkClasses = 'font-semibold text-orange-600 underline decoration-orange-300 hover:text-orange-700';
+
 const requirements = [
   'An Active IPTV UK Subscription',
   'Stable Internet Connection',
@@ -31,98 +42,107 @@ const apps = [
 
 const setupGuides = [
   {
-    title: 'Setting IPTV on Amazon Firestick',
+    title: 'Setting IPTV UK on Amazon Firestick',
     intro: 'Firestick remains one of the most popular devices for IPTV streaming in the UK.',
     label: 'Steps',
     accent: 'from-orange-500 to-amber-400',
     steps: [
-      'Install your preferred IPTV app.',
-      'Launch the IPTV player.',
-      'Select Xtream Codes Login or M3U Playlist.',
-      'Enter the IPTV subscription details provided by IPTV UK.',
-      'Allow channels and content to load.',
-      'Start enjoying live TV, sports, movies, and entertainment.'
+      'Enable app installs from outside the Appstore. Go to Settings → My Fire TV → Developer Options and turn on Apps from Unknown Sources.',
+      'Install the Downloader app. Search for Downloader (orange icon) from your home screen and install it.',
+      'Install 8K Player. Open Downloader and enter code 6124314 to install our recommended player, 8K Player.',
+      'Enter your account details. Open 8K Player and fill in the profile name, username, and password from your IPTV UK activation email.'
     ]
   },
   {
-    title: 'Setting IPTV on Android TV',
+    title: 'Setting IPTV UK on Android TV',
     intro: 'Android TV offers excellent support for IPTV subscriptions.',
     label: 'Installation Steps',
     accent: 'from-emerald-500 to-lime-400',
     steps: [
-      'Open Google Play Store.',
-      'Download your preferred IPTV player.',
-      'Launch the application.',
-      'Enter your IPTV UK login details.',
-      'Import channels and content.',
-      'Start streaming.'
+      'Open the Google Play Store from your app drawer.',
+      'Search for "IBO Player" and install it directly from the Play Store.',
+      <>
+        Open IBO Player — it will display a MAC address and Device Key on screen. Send both to{' '}
+        <a href={deviceKeyWhatsAppHref} target="_blank" rel="noreferrer" className={whatsAppLinkClasses}>
+          IPTV UK support on WhatsApp
+        </a>{' '}
+        and our team will add your playlist.
+      </>,
+      'Once support confirms your playlist has been added, restart IBO Player and your channels will load automatically.'
     ],
     outro: 'Android TV provides one of the best IPTV experiences thanks to its flexibility and performance.'
   },
   {
-    title: 'Setting IPTV on Smart TVs',
+    title: 'Setting IPTV UK on Smart TVs',
     intro: 'Many customers prefer watching IPTV directly on their Smart TVs.',
-    supported: ['Samsung Smart TV', 'LG Smart TV', 'Android Smart TV'],
+    supported: ['Samsung Smart Hub', 'LG Content Store', 'Roku Channel Store'],
     label: 'Setup Guide',
     accent: 'from-sky-500 to-cyan-400',
     steps: [
-      'Install a compatible IPTV app.',
-      'Open the application.',
-      'Add your IPTV subscription credentials.',
-      'Import playlist information.',
-      'Load channels.',
-      'Begin streaming.'
+      "Open your TV's app store — Samsung Smart Hub, LG Content Store, or the Roku Channel Store, depending on your television.",
+      'Search for "IBO Player" in your TV\'s app store and install it.',
+      <>
+        Open IBO Player — it will display a MAC address and Device Key on screen. Send both to{' '}
+        <a href={deviceKeyWhatsAppHref} target="_blank" rel="noreferrer" className={whatsAppLinkClasses}>
+          IPTV UK support on WhatsApp
+        </a>{' '}
+        and our team will add your playlist.
+      </>,
+      'Once support confirms your playlist has been added, restart IBO Player and your channels will load automatically.'
     ]
   },
   {
-    title: 'Setting IPTV on Android Smartphones',
-    intro: 'Watch your favourite UK channels and entertainment anywhere.',
-    label: 'Setup Process',
-    accent: 'from-fuchsia-500 to-pink-400',
-    steps: [
-      'Install an IPTV player.',
-      'Open the application.',
-      'Enter subscription credentials.',
-      'Load playlists.',
-      'Enjoy IPTV streaming on mobile devices.'
-    ]
-  },
-  {
-    title: 'Setting IPTV on iPhone & iPad',
+    title: 'Setting IPTV UK on iPhone & iPad',
     intro: 'Apple users can enjoy IPTV UK using compatible IPTV apps available through the App Store.',
     label: 'Quick Setup',
     accent: 'from-slate-700 to-slate-500',
     steps: [
-      'Download an IPTV application.',
-      'Open the app.',
-      'Enter your IPTV subscription details.',
-      'Save settings.',
-      'Load channels and content.'
+      'Open the App Store on your iPhone or iPad.',
+      'Search for "IBO Player" and install it directly from the App Store.',
+      <>
+        Open IBO Player — it will display a MAC address and Device Key on screen. Send both to{' '}
+        <a href={deviceKeyWhatsAppHref} target="_blank" rel="noreferrer" className={whatsAppLinkClasses}>
+          IPTV UK support on WhatsApp
+        </a>{' '}
+        and our team will add your playlist.
+      </>,
+      'Once support confirms your playlist has been added, restart IBO Player and your channels will load automatically.'
     ]
   },
   {
-    title: 'Setting IPTV on Windows PC',
+    title: 'Setting IPTV UK on Windows PC',
     intro: 'Many users prefer watching IPTV through their desktop or laptop.',
     label: 'Steps',
     accent: 'from-indigo-500 to-violet-400',
     steps: [
-      'Install a supported IPTV player.',
-      'Open the application.',
-      'Enter your IPTV UK credentials.',
-      'Import playlists or Xtream Codes.',
-      'Start watching.'
+      'Open the Microsoft Store on your Windows PC.',
+      'Search for and install IPTV Smarters Expert, or install IBO Player instead if you prefer.',
+      <>
+        If you're using IPTV Smarters Expert, enter the username and password from your activation email. If
+        you're using IBO Player, send the MAC address and Device Key shown in the app to{' '}
+        <a href={deviceKeyWhatsAppHref} target="_blank" rel="noreferrer" className={whatsAppLinkClasses}>
+          IPTV UK support on WhatsApp
+        </a>
+        .
+      </>,
+      'Restart the app once support confirms your playlist has been added.'
     ]
   },
   {
-    title: 'Setting IPTV on Mac',
-    intro: 'Mac users can also enjoy IPTV subscriptions with compatible software.',
-    label: 'Installation Steps',
-    accent: 'from-rose-500 to-orange-400',
+    title: 'Setting IPTV UK on MAG Boxes',
+    intro: 'MAG boxes remain popular with viewers who prefer a dedicated IPTV set-top box.',
+    label: 'Portal Setup',
+    accent: 'from-fuchsia-500 to-pink-400',
     steps: [
-      'Install an IPTV player.',
-      'Add your IPTV account details.',
-      'Import content.',
-      'Begin streaming live TV and movies.'
+      "Find your MAG box's MAC address. Check Settings → System Info on the box, or look for the sticker underneath it.",
+      <>
+        Message the MAC address to{' '}
+        <a href={macWhatsAppHref} target="_blank" rel="noreferrer" className={whatsAppLinkClasses}>
+          IPTV UK support on WhatsApp
+        </a>
+        . Our team will add it to the server and send you a portal address.
+      </>,
+      'Go to Settings → System Settings → Servers on your MAG box, enter the portal address support gave you, then save and reboot.'
     ]
   }
 ];
@@ -206,7 +226,7 @@ const faqs = [
   }
 ];
 
-const heroDevices = ['Firestick', 'Smart TV', 'Android TV', 'iPhone', 'Windows', 'Mac'];
+const heroDevices = ['Firestick', 'Smart TV', 'Android TV', 'iPhone', 'Windows', 'MAG Box'];
 
 export default function InstallationGuideSection() {
   return (
@@ -332,7 +352,7 @@ export default function InstallationGuideSection() {
                   ) : null}
                   <ol className="mt-5 space-y-3">
                     {guide.steps.map((step, index) => (
-                      <li key={step} className="flex gap-4 rounded-2xl border border-slate-200 bg-slate-50 px-4 py-4 text-sm text-slate-700 transition group-hover:border-slate-300">
+                      <li key={index} className="flex gap-4 rounded-2xl border border-slate-200 bg-slate-50 px-4 py-4 text-sm text-slate-700 transition group-hover:border-slate-300">
                         <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-slate-900 text-xs font-bold text-white">{index + 1}</span>
                         <span className="leading-relaxed">{step}</span>
                       </li>

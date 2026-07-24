@@ -12,7 +12,7 @@
       "static/chunks/fd9d1056-06fe44696aec3f50.js",
       "static/chunks/117-80b09a1b7c4264e1.js",
       "static/chunks/main-app-4a043f54497f34ba.js",
-      "static/css/fbac4dc8eba14670.css",
+      "static/css/fd4e6240f778e24f.css",
       "static/chunks/app/layout-dc11c38bd69d0413.js"
     ],
     "/channels/page": [
@@ -40,14 +40,6 @@
       "static/chunks/876-e33d928c043e4a18.js",
       "static/chunks/app/cookies/page-11253236a14965c7.js"
     ],
-    "/pricing/page": [
-      "static/chunks/webpack-c81f7fd28659d64f.js",
-      "static/chunks/fd9d1056-06fe44696aec3f50.js",
-      "static/chunks/117-80b09a1b7c4264e1.js",
-      "static/chunks/main-app-4a043f54497f34ba.js",
-      "static/chunks/876-e33d928c043e4a18.js",
-      "static/chunks/app/pricing/page-a76206f43011120b.js"
-    ],
     "/privacy/page": [
       "static/chunks/webpack-c81f7fd28659d64f.js",
       "static/chunks/fd9d1056-06fe44696aec3f50.js",
@@ -55,6 +47,14 @@
       "static/chunks/main-app-4a043f54497f34ba.js",
       "static/chunks/876-e33d928c043e4a18.js",
       "static/chunks/app/privacy/page-a2c871da39e23877.js"
+    ],
+    "/refund/page": [
+      "static/chunks/webpack-c81f7fd28659d64f.js",
+      "static/chunks/fd9d1056-06fe44696aec3f50.js",
+      "static/chunks/117-80b09a1b7c4264e1.js",
+      "static/chunks/main-app-4a043f54497f34ba.js",
+      "static/chunks/876-e33d928c043e4a18.js",
+      "static/chunks/app/refund/page-1fad6274e0f2f11a.js"
     ],
     "/status/page": [
       "static/chunks/webpack-c81f7fd28659d64f.js",
@@ -64,13 +64,13 @@
       "static/chunks/876-e33d928c043e4a18.js",
       "static/chunks/app/status/page-e0a4d2ad471fe008.js"
     ],
-    "/refund/page": [
+    "/pricing/page": [
       "static/chunks/webpack-c81f7fd28659d64f.js",
       "static/chunks/fd9d1056-06fe44696aec3f50.js",
       "static/chunks/117-80b09a1b7c4264e1.js",
       "static/chunks/main-app-4a043f54497f34ba.js",
       "static/chunks/876-e33d928c043e4a18.js",
-      "static/chunks/app/refund/page-1fad6274e0f2f11a.js"
+      "static/chunks/app/pricing/page-a76206f43011120b.js"
     ],
     "/terms/page": [
       "static/chunks/webpack-c81f7fd28659d64f.js",
