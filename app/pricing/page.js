@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Footer from '../../components/layout/Footer';
 import Header from '../../components/layout/Header';
 import { plans } from '../../data/plans';
+import { getWhatsAppLink } from '../../lib/whatsapp';
 
 const includedItems = [
   'Thousands of Live TV Channels',
@@ -267,15 +268,18 @@ export default function PricingPage() {
                     </li>
                   ))}
                 </ul>
-                <button
-                  className={`mt-7 rounded-full px-5 py-3 text-sm font-semibold transition ${
+                <a
+                  href={getWhatsAppLink(`Hi, I'm interested in the ${plan.name} (GBP ${plan.price}).`)}
+                  target="_blank"
+                  rel="noreferrer"
+                  className={`mt-7 inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-semibold transition ${
                     plan.featured
                       ? 'bg-slate-900 text-white hover:bg-slate-800'
                       : 'bg-orange-500 text-white hover:bg-orange-600'
                   }`}
                 >
                   Get Started
-                </button>
+                </a>
               </article>
             ))}
           </div>

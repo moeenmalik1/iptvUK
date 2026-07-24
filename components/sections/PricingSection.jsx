@@ -1,6 +1,6 @@
-import Link from 'next/link';
 import SectionHeading from '../ui/SectionHeading';
 import { plans } from '../../data/plans';
+import { getWhatsAppLink } from '../../lib/whatsapp';
 
 export default function PricingSection() {
   return (
@@ -43,14 +43,16 @@ export default function PricingSection() {
                   </li>
                 ))}
               </ul>
-              <Link
-                href="/pricing"
+              <a
+                href={getWhatsAppLink(`Hi, I'm interested in the ${plan.name} (GBP ${plan.price}).`)}
+                target="_blank"
+                rel="noreferrer"
                 className={`mt-7 inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-semibold transition ${
                   plan.featured ? 'bg-slate-900 text-white hover:bg-slate-800' : 'bg-orange-500 text-white hover:bg-orange-600'
                 }`}
               >
                 Get Started
-              </Link>
+              </a>
             </article>
           ))}
         </div>

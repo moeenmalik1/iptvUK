@@ -1,6 +1,9 @@
 import Image from 'next/image';
+import { getWhatsAppLink } from '../../lib/whatsapp';
 
 export default function HeroSection() {
+  const trialWhatsAppHref = getWhatsAppLink("Hi, I'd like to claim my 24 Hours Free Trial for IPTV UK.");
+
   return (
     <section className="bg-slate-100 py-14">
       <div className="mx-auto grid w-full max-w-6xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
@@ -30,9 +33,14 @@ export default function HeroSection() {
             <button className="rounded-md bg-orange-500 px-5 py-3 text-sm font-semibold text-white hover:bg-orange-600">
               Explore IPTV UK
             </button>
-            <button className="animate-pulse-glow rounded-md border-2 border-emerald-500 bg-white px-5 py-3 text-sm font-semibold text-emerald-600 transition-transform hover:scale-105 hover:animate-none hover:bg-emerald-500 hover:text-white">
+            <a
+              href={trialWhatsAppHref}
+              target="_blank"
+              rel="noreferrer"
+              className="animate-pulse-glow inline-flex items-center justify-center rounded-md border-2 border-emerald-500 bg-white px-5 py-3 text-sm font-semibold text-emerald-600 transition-transform hover:scale-105 hover:animate-none hover:bg-emerald-500 hover:text-white"
+            >
               24 Hours Free Trial
-            </button>
+            </a>
           </div>
         </div>
         <div className="relative">

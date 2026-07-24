@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { getWhatsAppLink } from '../../lib/whatsapp';
 
 const columns = [
   {
@@ -32,7 +33,7 @@ const columns = [
     title: 'Support',
     links: [
       { label: 'Help Center', href: '/#faq' },
-      { label: 'WhatsApp', href: 'https://wa.me/447453598130' },
+      { label: 'WhatsApp', href: getWhatsAppLink() },
       { label: 'Email Support', href: 'mailto:contact@iptvuk.it.com' },
       { label: 'Ticket Portal', href: '/#contact' }
     ]

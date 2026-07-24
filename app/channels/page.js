@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Header from '../../components/layout/Header';
 import Footer from '../../components/layout/Footer';
 import { Search, Tv, Film, Trophy, Compass, Sparkles, Check, Flame, MessageSquare, Play, HelpCircle } from 'lucide-react';
+import { getWhatsAppLink } from '../../lib/whatsapp';
 
 const categories = [
   { id: 'all', label: 'All Channels', icon: Compass },
@@ -213,12 +214,14 @@ export default function ChannelsPage() {
                 >
                   View Plans & Pricing
                 </Link>
-                <Link
-                  href="/#contact"
+                <a
+                  href={getWhatsAppLink("Hi, I'd like to claim my 24 Hours Free Trial for IPTV UK.")}
+                  target="_blank"
+                  rel="noreferrer"
                   className="px-5 py-3 rounded-full border border-slate-700 bg-slate-950/60 hover:bg-slate-900 text-slate-300 font-semibold text-sm transition"
                 >
                   Request Free Trial
-                </Link>
+                </a>
               </div>
             </div>
           </div>

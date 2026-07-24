@@ -2,6 +2,7 @@
 
 import { Clock3, Mail, MessageCircle, Phone } from 'lucide-react';
 import { useMemo, useState } from 'react';
+import { WHATSAPP_NUMBER, getWhatsAppLink } from '../../lib/whatsapp';
 
 const contactDetails = [
   {
@@ -12,7 +13,7 @@ const contactDetails = [
   },
   {
     title: 'Call Us',
-    value: '+447453598130',
+    value: `+${WHATSAPP_NUMBER}`,
     note: 'Available 24/7',
     icon: Phone
   },
@@ -35,7 +36,7 @@ export default function ContactSection() {
 Email: ${email || '[Your Email]'}
 Subject: ${subject || '[Subject]'}
 Message: ${message || '[Your message]'}`;
-    return `https://wa.me/447453598130?text=${encodeURIComponent(whatsappMessage)}`;
+    return getWhatsAppLink(whatsappMessage);
   }, [name, email, subject, message]);
 
   return (
