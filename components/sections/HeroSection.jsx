@@ -30,6 +30,9 @@ export default function HeroSection() {
             <button className="rounded-md bg-orange-500 px-5 py-3 text-sm font-semibold text-white hover:bg-orange-600">
               Explore IPTV UK
             </button>
+            <button className="animate-pulse-glow rounded-md border-2 border-emerald-500 bg-white px-5 py-3 text-sm font-semibold text-emerald-600 transition-transform hover:scale-105 hover:animate-none hover:bg-emerald-500 hover:text-white">
+              24 Hours Free Trial
+            </button>
           </div>
         </div>
         <div className="relative">
