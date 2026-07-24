@@ -1,59 +1,58 @@
-import PricingCard from '../ui/PricingCard';
+import Link from 'next/link';
 import SectionHeading from '../ui/SectionHeading';
-
-const pricing = [
-  {
-    plan: 'Monthly',
-    monthly: '14.99',
-    original: '19.99',
-    features: ['Choose your UK IPTV subscription plan', 'Instant delivery after checkout', 'HD, Full HD & 4K support', 'No contracts or hidden fees']
-  },
-  {
-    plan: '3 Months',
-    monthly: '24.99',
-    original: '29.99',
-    features: ['Great value for regular users', 'UK, USA & worldwide channels', 'Sports, movies, and VOD access', 'Fast setup assistance']
-  },
-  {
-    plan: 'Annual',
-    monthly: '49.99',
-    original: '69.99',
-    highlighted: true,
-    features: ['Best long-term value', 'Stable UK IPTV subscription', 'Priority response support', 'Premium IPTV experience']
-  }
-];
+import { plans } from '../../data/plans';
 
 export default function PricingSection() {
   return (
-    <section className="bg-white py-16">
+    <section id="pricing" className="bg-slate-50 py-16">
       <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
-        <SectionHeading
-          title="Simple Pricing & Instant Activation"
-          subtitle="Buy IPTV Subscription in Minutes"
-        />
+        <SectionHeading title="IPTV Subscription Plans" subtitle="Choose the package that best suits your requirements." />
 
-        <div className="mx-auto mt-8 max-w-2xl rounded-xl border border-slate-200 bg-slate-50 p-6">
-          <ol className="space-y-3 text-sm font-medium text-slate-700 sm:text-base">
-            <li>1. Choose your UK IPTV subscription plan</li>
-            <li>2. Complete checkout</li>
-            <li>3. Receive login details instantly</li>
-            <li>4. Start streaming immediately</li>
-          </ol>
-        </div>
-
-        <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {pricing.map((plan) => (
-            <PricingCard key={plan.plan} {...plan} />
+        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {plans.map((plan) => (
+            <article
+              key={plan.name}
+              className={`relative flex h-full flex-col rounded-2xl border p-6 shadow-sm transition hover:-translate-y-1 ${
+                plan.featured
+                  ? 'border-orange-400 bg-gradient-to-b from-white to-orange-50 ring-1 ring-orange-300'
+                  : 'border-slate-200 bg-white'
+              }`}
+            >
+              {plan.featured ? (
+                <span className="absolute -top-3 right-5 rounded-full bg-orange-500 px-3 py-1 text-xs font-bold uppercase tracking-[0.18em] text-white shadow-lg shadow-orange-500/30">
+                  Popular
+                </span>
+              ) : null}
+              <p className={`text-xs font-bold uppercase tracking-[0.24em] ${plan.featured ? 'text-orange-600' : 'text-slate-500'}`}>
+                {plan.per}
+              </p>
+              <p className="mt-3 text-lg font-black leading-tight text-slate-900">{plan.name}</p>
+              <p className="mt-5 text-4xl font-black tracking-tight text-slate-900">GBP {plan.price}</p>
+              <p className="mt-1 text-sm text-slate-500">Billed per {plan.per}</p>
+              <p className="mt-4 text-sm leading-6 text-slate-600">{plan.note}</p>
+              {plan.promo ? (
+                <p className="mt-4 rounded-xl border border-orange-200 bg-orange-50 px-4 py-3 text-sm font-semibold text-orange-700">
+                  {plan.promo}
+                </p>
+              ) : null}
+              <ul className="mt-6 flex-1 space-y-3 text-sm text-slate-600">
+                {plan.features.map((item) => (
+                  <li key={item} className="flex gap-3">
+                    <span className="mt-0.5 text-emerald-500">✓</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <Link
+                href="/pricing"
+                className={`mt-7 inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-semibold transition ${
+                  plan.featured ? 'bg-slate-900 text-white hover:bg-slate-800' : 'bg-orange-500 text-white hover:bg-orange-600'
+                }`}
+              >
+                Get Started
+              </Link>
+            </article>
           ))}
-        </div>
-
-        <div className="mt-8 rounded-xl border border-emerald-200 bg-emerald-50 p-4 text-center text-sm text-emerald-700">
-          No contracts. No hidden fees. Just premium IPTV.
-        </div>
-        <div className="mt-5 text-center">
-          <button className="rounded-md bg-orange-500 px-6 py-3 text-sm font-semibold text-white hover:bg-orange-600">
-            Buy IPTV Subscription Now
-          </button>
         </div>
       </div>
     </section>

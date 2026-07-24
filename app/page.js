@@ -7,6 +7,7 @@ import FeaturesSection from '../components/sections/FeaturesSection';
 import HowItWorksSection from '../components/sections/HowItWorksSection';
 import HeroSection from '../components/sections/HeroSection';
 import PerformanceSection from '../components/sections/PerformanceSection';
+import PricingSection from '../components/sections/PricingSection';
 import TrustAndTestimonialsSection from '../components/sections/TrustAndTestimonialsSection';
 import WhyChooseSection from '../components/sections/WhyChooseSection';
 
@@ -16,6 +17,7 @@ export default function HomePage() {
       <Header />
       <HeroSection />
       <WhyChooseSection />
+      <PricingSection />
       <DevicesBanner />
       <FeaturesSection />
       <HowItWorksSection />
