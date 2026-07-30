@@ -7,6 +7,7 @@ import FeaturesSection from '../components/sections/FeaturesSection';
 import HowItWorksSection from '../components/sections/HowItWorksSection';
 import HeroSection from '../components/sections/HeroSection';
 import PerformanceSection from '../components/sections/PerformanceSection';
+import PlanComparisonSection from '../components/sections/PlanComparisonSection';
 import PricingSection from '../components/sections/PricingSection';
 import TrustAndTestimonialsSection from '../components/sections/TrustAndTestimonialsSection';
 import WhyChooseSection from '../components/sections/WhyChooseSection';
@@ -18,6 +19,7 @@ export default function HomePage() {
       <HeroSection />
       <WhyChooseSection />
       <PricingSection />
+      <PlanComparisonSection />
       <DevicesBanner />
       <FeaturesSection />
       <HowItWorksSection />
