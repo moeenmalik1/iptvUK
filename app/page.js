@@ -11,10 +11,15 @@ import PlanComparisonSection from '../components/sections/PlanComparisonSection'
 import PricingSection from '../components/sections/PricingSection';
 import TrustAndTestimonialsSection from '../components/sections/TrustAndTestimonialsSection';
 import WhyChooseSection from '../components/sections/WhyChooseSection';
+import { getHomePageSchema } from '../lib/schema';
 
 export default function HomePage() {
   return (
     <main className="bg-white text-slate-900">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(getHomePageSchema()) }}
+      />
       <Header />
       <HeroSection />
       <WhyChooseSection />
