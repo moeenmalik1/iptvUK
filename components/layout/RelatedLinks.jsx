@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { deviceNav } from '../../data/devices/nav';
 
 // Keyword-bearing internal links for pages that would otherwise be dead ends.
 // Anchor text is the search phrase people actually use, not "click here".
@@ -14,12 +15,7 @@ const groups = [
   },
   {
     title: 'By device',
-    links: [
-      { label: 'IPTV for Firestick', href: '/iptv-firestick-subscription-uk' },
-      { label: 'IPTV for Android TV', href: '/iptv-for-android-tv-uk' },
-      { label: 'IPTV for PC', href: '/iptv-for-pc-uk' },
-      { label: 'IPTV for iPhone', href: '/iptv-for-iphone-uk' }
-    ]
+    links: deviceNav
   },
   {
     title: 'Guides',

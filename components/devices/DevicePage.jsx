@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { deviceNav } from '../../data/devices/nav';
 import { plans } from '../../data/plans';
 import { getWhatsAppLink } from '../../lib/whatsapp';
 
@@ -365,12 +366,7 @@ export default function DevicePage({ device }) {
             and troubleshooting for each one.
           </p>
           <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-            {[
-              { label: 'IPTV for Firestick', href: '/iptv-firestick-subscription-uk' },
-              { label: 'IPTV for Android TV', href: '/iptv-for-android-tv-uk' },
-              { label: 'IPTV for PC', href: '/iptv-for-pc-uk' },
-              { label: 'IPTV for iPhone', href: '/iptv-for-iphone-uk' }
-            ]
+            {deviceNav
               .filter((item) => item.href !== `/${device.slug}`)
               .concat([{ label: 'All device setup', href: '/installation-guide' }])
               .map((item) => (
