@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Watching live sport without a satellite subscription">
+  <defs>
+    <linearGradient id="bgE" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a" />
+      <stop offset="0.5" stop-color="#132033" />
+      <stop offset="1" stop-color="#0b1220" />
+    </linearGradient>
+    <linearGradient id="pitchE" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#16a34a" />
+      <stop offset="1" stop-color="#065f46" />
+    </linearGradient>
+    <radialGradient id="glowE" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#22c55e" stop-opacity="0.35" />
+      <stop offset="1" stop-color="#22c55e" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bgE)" />
+  <circle cx="600" cy="300" r="330" fill="url(#glowE)" />
+
+  <!-- main television with pitch -->
+  <rect x="300" y="110" width="600" height="360" rx="24" fill="#020617" stroke="#334155" stroke-width="6" />
+  <rect x="328" y="138" width="544" height="304" rx="12" fill="url(#pitchE)" />
+
+  <!-- pitch markings -->
+  <g stroke="#f8fafc" stroke-width="3" fill="none" opacity="0.65">
+    <rect x="348" y="158" width="504" height="264" rx="4" />
+    <line x1="600" y1="158" x2="600" y2="422" />
+    <circle cx="600" cy="290" r="52" />
+    <rect x="348" y="222" width="66" height="136" />
+    <rect x="786" y="222" width="66" height="136" />
+  </g>
+  <circle cx="600" cy="290" r="8" fill="#f8fafc" opacity="0.8" />
+
+  <!-- live score bar -->
+  <rect x="348" y="158" width="250" height="44" rx="10" fill="#0f172a" opacity="0.85" />
+  <rect x="366" y="172" width="16" height="16" rx="4" fill="#ef4444" />
+  <rect x="396" y="174" width="86" height="12" rx="6" fill="#f8fafc" opacity="0.75" />
+  <rect x="498" y="174" width="82" height="12" rx="6" fill="#f97316" />
+
+  <!-- stand -->
+  <rect x="540" y="470" width="120" height="16" rx="8" fill="#334155" />
+  <rect x="470" y="486" width="260" height="14" rx="7" fill="#1e293b" />
+
+  <!-- crossed out satellite dish -->
+  <g transform="translate(140 400)">
+    <path d="M20 100 C20 40 68 -8 128 -8 L128 24 C86 24 52 58 52 100 Z" fill="#475569" opacity="0.8" />
+    <rect x="12" y="100" width="120" height="14" rx="7" fill="#475569" opacity="0.8" />
+    <circle cx="96" cy="40" r="12" fill="#94a3b8" opacity="0.8" />
+    <g stroke="#f43f5e" stroke-width="12" stroke-linecap="round">
+      <line x1="4" y1="-14" x2="146" y2="122" />
+    </g>
+  </g>
+
+  <!-- streaming devices row -->
+  <g transform="translate(880 400)">
+    <rect x="0" y="0" width="96" height="150" rx="18" fill="#111827" stroke="#334155" stroke-width="4" />
+    <rect x="14" y="16" width="68" height="106" rx="10" fill="#f97316" opacity="0.35" />
+    <path d="M40 56l24 16-24 16z" fill="#f97316" />
+
+    <rect x="120" y="34" width="170" height="112" rx="14" fill="#111827" stroke="#334155" stroke-width="4" />
+    <rect x="136" y="50" width="138" height="66" rx="8" fill="#38bdf8" opacity="0.28" />
+    <path d="M192 68l24 16-24 16z" fill="#38bdf8" />
+  </g>
+</svg>

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { guides } from '../../data/guides';
 import { getWhatsAppLink } from '../../lib/whatsapp';
 
 const columns = [
@@ -18,6 +19,13 @@ const columns = [
       { label: 'Channels', href: '/channels' },
       { label: 'Setup Guide', href: '/installation-guide' },
       { label: 'Contact', href: '/#contact' }
+    ]
+  },
+  {
+    title: 'Guides',
+    links: [
+      ...guides.map((guide) => ({ label: guide.title, href: `/guides/${guide.slug}` })),
+      { label: 'All Guides', href: '/guides' }
     ]
   },
   {
@@ -44,7 +52,7 @@ export default function Footer() {
   return (
     <footer className="bg-slate-950 py-12 text-slate-300">
       <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div className="grid gap-8 md:grid-cols-4">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-5">
           {columns.map((column) => (
             <div key={column.title}>
               <h4 className="text-sm font-bold uppercase tracking-[0.2em] text-white">{column.title}</h4>

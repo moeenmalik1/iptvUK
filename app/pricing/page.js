@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Footer from '../../components/layout/Footer';
 import Header from '../../components/layout/Header';
+import GuideLinkStrip from '../../components/guides/GuideLinkStrip';
 import { plans } from '../../data/plans';
 import { pricingFaqs as faqs } from '../../data/faqs';
 import { getWhatsAppLink } from '../../lib/whatsapp';
@@ -358,6 +359,15 @@ export default function PricingPage() {
               </div>
             </div>
           </div>
+        </section>
+
+        <section className="mx-auto w-full max-w-6xl px-4 pb-10 sm:px-6 lg:px-8 lg:pb-14">
+          <GuideLinkStrip
+            dark
+            slugs={['iptv-vs-netflix-uk', 'how-to-cancel-sky-tv-uk', 'how-to-watch-sky-sports-without-sky-tv']}
+            title="Working out what to pay for?"
+            description="Compare the cost of live TV, on-demand streaming and a traditional pay TV package before you commit."
+          />
         </section>
 
         <section id="faq" className="mx-auto w-full max-w-6xl px-4 pb-10 sm:px-6 lg:px-8 lg:pb-14">

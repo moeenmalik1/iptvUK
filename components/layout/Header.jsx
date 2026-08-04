@@ -12,6 +12,7 @@ const links = [
   { label: 'Home', href: '/' },
   { label: 'Channels', href: '/channels' },
   { label: 'Installation Guide', href: '/installation-guide' },
+  { label: 'Guides', href: '/guides' },
   { label: 'Services', href: '/#services' },
   { label: 'Pricing', href: '/pricing' },
   { label: 'Features', href: '#features' },
@@ -47,7 +48,7 @@ export default function Header() {
         </Link>
         
         {/* Desktop Navigation */}
-        <nav className="hidden items-center gap-5 text-sm font-medium text-slate-600 md:flex">
+        <nav className="hidden items-center gap-4 text-sm font-medium text-slate-600 lg:flex">
           {links.map((link) => (
             <Link key={link.label} href={resolveHref(link.href)} className="transition hover:text-orange-500">
               {link.label}
@@ -56,7 +57,7 @@ export default function Header() {
         </nav>
 
         {/* Action Buttons */}
-        <div className="hidden items-center gap-2 md:flex">
+        <div className="hidden items-center gap-2 lg:flex">
           <a
             href={trialWhatsAppHref}
             target="_blank"
@@ -76,7 +77,7 @@ export default function Header() {
         {/* Mobile Hamburger Button */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="flex h-10 w-10 items-center justify-center rounded-md border border-slate-200 text-slate-700 md:hidden hover:bg-slate-50 transition"
+          className="flex h-10 w-10 items-center justify-center rounded-md border border-slate-200 text-slate-700 lg:hidden hover:bg-slate-50 transition"
           aria-label="Toggle menu"
         >
           {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -85,7 +86,7 @@ export default function Header() {
 
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
-        <div className="border-t border-slate-200 bg-white px-4 py-4 md:hidden shadow-lg">
+        <div className="border-t border-slate-200 bg-white px-4 py-4 lg:hidden shadow-lg">
           <nav className="flex flex-col gap-4 text-sm font-medium text-slate-600">
             {links.map((link) => (
               <Link
