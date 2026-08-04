@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { guideHref, guides } from '../../data/guides';
+import { guideHref, guideNav } from '../../data/guides/nav';
 import { getWhatsAppLink } from '../../lib/whatsapp';
 
 const columns = [
@@ -24,7 +24,7 @@ const columns = [
   {
     title: 'Guides',
     links: [
-      ...guides.map((guide) => ({ label: guide.title, href: guideHref(guide.slug) })),
+      ...guideNav.map((guide) => ({ label: guide.title, href: guideHref(guide.slug) })),
       { label: 'All Guides', href: '/guides' }
     ]
   },

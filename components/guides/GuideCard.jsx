@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { guideHref } from '../../data/guides';
+import { guideHref } from '../../data/guides/nav';
 
 export default function GuideCard({ guide, featured = false }) {
   return (
