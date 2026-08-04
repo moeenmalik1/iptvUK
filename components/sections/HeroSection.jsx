@@ -48,7 +48,7 @@ export default function HeroSection() {
             <Image src="/images/hero-image.png" alt="IPTV UK Hero" className="object-cover" width={700} height={900} />
           </div>
 
-          <div className="absolute -bottom-5 -left-5 rounded-xl bg-white p-4 shadow-lg">
+          <div className="absolute -bottom-5 left-0 rounded-xl bg-white p-4 shadow-lg sm:-left-5">
             <p className="text-sm font-semibold text-slate-700">Reliable Streaming Technology</p>
           </div>
         </div>

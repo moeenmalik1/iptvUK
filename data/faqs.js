@@ -208,3 +208,56 @@ export const firestickFaqs = [
       'Choose a plan and message us on WhatsApp. We send your login details directly to you, along with the setup code for the recommended player. Keep those details private, because anyone who has them can use your subscription.'
   }
 ];
+
+export const freeTrialFaqs = [
+  {
+    question: 'Is the IPTV UK Free Trial Really Free?',
+    answer:
+      'Yes. The 24-hour trial costs nothing and we do not ask for a card number, billing address, or bank details to start it. Message us on WhatsApp and we send your login details. Nothing renews and nothing charges automatically, because there is no payment method on file to charge.'
+  },
+  {
+    question: 'How Long Does the Free Trial Last?',
+    answer:
+      'Twenty-four hours from the moment your login details are issued. That covers a full evening of live television, a match, and a film, which is usually enough to judge whether the service performs on your connection.'
+  },
+  {
+    question: 'Do I Need a Credit Card to Start the Trial?',
+    answer:
+      'No. There is no card form and no checkout. You message us on WhatsApp, we reply with your details, and you enter them into a player on your device.'
+  },
+  {
+    question: 'What Do I Get During the Trial?',
+    answer:
+      'The trial is not a cut-down demo. You get access to the live channels, sports, films, series, and programme guide that paying customers use, so what you see during the trial is what you would be paying for.'
+  },
+  {
+    question: 'Which Devices Can I Use for the Free Trial?',
+    answer:
+      'Any device we support: Amazon Firestick, Android TV boxes, Smart TVs, MAG boxes, iPhone, iPad, Android phones and tablets, Windows PCs, and Macs. Use the device you actually plan to watch on, because that is the only way the trial tells you anything useful.'
+  },
+  {
+    question: 'How Quickly Will I Receive My Trial Details?',
+    answer:
+      'Usually within a few minutes during normal hours. Message us on WhatsApp and we will send your login details along with the setup steps for your device.'
+  },
+  {
+    question: 'Can I Get a Second Free Trial?',
+    answer:
+      'The trial is designed to be used once per household so we can keep offering it to new customers. If something went wrong during your trial, such as a broadband problem or an installation you could not finish, message us and explain what happened. We would rather sort it out than have you buy a plan you are unsure about.'
+  },
+  {
+    question: 'What Happens When the Trial Ends?',
+    answer:
+      'Access simply stops. There is no invoice, no automatic renewal, and no cancellation to remember, because you never entered payment details. If you want to continue, choose a plan and we issue fresh login details.'
+  },
+  {
+    question: 'Will I Be Added to a Mailing List or Called?',
+    answer:
+      'No. We reply on WhatsApp about your trial and answer any questions you ask. We do not run automated marketing calls or add trial users to mailing lists.'
+  },
+  {
+    question: 'What If the Trial Does Not Work Properly?',
+    answer:
+      'Tell us what you are seeing before the trial expires. Most problems are a mistyped password, a player that has not finished importing the channel list, or Wi-Fi rather than the service itself. If we cannot get it working during your trial window, do not buy a plan.'
+  }
+];

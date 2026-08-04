@@ -5,31 +5,53 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { ChevronDown, Menu, X } from 'lucide-react';
 import { guideHref, guideNav } from '../../data/guides/nav';
-import { getWhatsAppLink } from '../../lib/whatsapp';
 
-const trialWhatsAppHref = getWhatsAppLink("Hi, I'd like to claim my 24 Hours Free Trial.");
+// Five top-level tabs, each grouping its own sub-items. Keeping the bar short
+// is what stops it wrapping onto two lines at tablet and laptop widths. The
+// logo doubles as the Home link.
+const deviceGuides = ['best-android-tv-box-iptv-uk', 'iptv-for-iphone-uk'];
 
-// `secondary` links duplicate on-page anchors, so they drop off the desktop bar
-// on narrower screens to keep the primary pages visible. All of them still
-// appear in the mobile drawer.
 const links = [
-  { label: 'Home', href: '/' },
   { label: 'Channels', href: '/channels' },
-  { label: 'Firestick', href: '/iptv-firestick-subscription-uk' },
-  { label: 'Installation Guide', href: '/installation-guide' },
+  {
+    label: 'Devices',
+    href: '/installation-guide',
+    children: [
+      { label: 'IPTV for Firestick', href: '/iptv-firestick-subscription-uk' },
+      ...guideNav
+        .filter((item) => deviceGuides.includes(item.slug))
+        .map((item) => ({ label: item.label, href: guideHref(item.slug) })),
+      { label: 'All device setup', href: '/installation-guide' }
+    ]
+  },
   {
     label: 'Guides',
     href: '/guides',
     children: [
-      ...guideNav.map((item) => ({ label: item.label, href: guideHref(item.slug) })),
+      ...guideNav
+        .filter((item) => !deviceGuides.includes(item.slug))
+        .map((item) => ({ label: item.label, href: guideHref(item.slug) })),
       { label: 'All guides', href: '/guides' }
     ]
   },
-  { label: 'Pricing', href: '/pricing' },
-  { label: 'Services', href: '/#services', secondary: true },
-  { label: 'Features', href: '#features', secondary: true },
-  { label: 'FAQ', href: '#faq', secondary: true },
-  { label: 'Contact', href: '/#contact', secondary: true }
+  {
+    label: 'Pricing',
+    href: '/pricing',
+    children: [
+      { label: 'Plans & pricing', href: '/pricing' },
+      { label: 'Free 24hr trial', href: '/iptv-uk-free-trial' },
+      { label: 'Refund policy', href: '/refund' }
+    ]
+  },
+  {
+    label: 'Support',
+    href: '/#contact',
+    children: [
+      { label: 'Contact us', href: '/#contact' },
+      { label: 'FAQs', href: '/#faq' },
+      { label: 'Service status', href: '/status' }
+    ]
+  }
 ];
 
 export default function Header() {
@@ -51,7 +73,7 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur">
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-        <Link href="/" className="flex items-center gap-2">
+        <Link href="/" className="flex shrink-0 items-center gap-2">
           <div className="h-8 w-8 rounded-md bg-gradient-to-br from-orange-500 to-orange-300" />
           <div>
             <p className="text-xs font-bold uppercase tracking-widest text-slate-400">IPTV UK</p>
@@ -68,7 +90,7 @@ export default function Header() {
               <div key={link.label} className="group relative">
                 <Link
                   href={resolveHref(link.href)}
-                  className="flex items-center gap-1 transition hover:text-orange-500 group-hover:text-orange-500"
+                  className="flex items-center gap-1 whitespace-nowrap transition hover:text-orange-500 group-hover:text-orange-500"
                 >
                   {link.label}
                   <ChevronDown className="h-3.5 w-3.5 transition group-hover:rotate-180" />
@@ -92,7 +114,7 @@ export default function Header() {
               <Link
                 key={link.label}
                 href={resolveHref(link.href)}
-                className={`transition hover:text-orange-500 ${link.secondary ? 'hidden xl:inline' : ''}`}
+                className="whitespace-nowrap transition hover:text-orange-500"
               >
                 {link.label}
               </Link>
@@ -101,18 +123,16 @@ export default function Header() {
         </nav>
 
         {/* Action Buttons */}
-        <div className="hidden items-center gap-2 md:flex">
-          <a
-            href={trialWhatsAppHref}
-            target="_blank"
-            rel="noreferrer"
-            className="rounded-md border border-emerald-300 bg-emerald-50 px-3 py-2 text-xs font-semibold text-emerald-700 hover:bg-emerald-100 transition"
+        <div className="hidden shrink-0 items-center gap-2 md:flex">
+          <Link
+            href="/iptv-uk-free-trial"
+            className="hidden whitespace-nowrap rounded-md border border-emerald-300 bg-emerald-50 px-3 py-2 text-xs font-semibold text-emerald-700 transition hover:bg-emerald-100 lg:inline-block"
           >
             24hr Free Trial
-          </a>
+          </Link>
           <Link 
             href="/pricing" 
-            className="rounded-md bg-orange-500 px-3 py-2 text-xs font-semibold text-white hover:bg-orange-600 transition"
+            className="whitespace-nowrap rounded-md bg-orange-500 px-3 py-2 text-xs font-semibold text-white transition hover:bg-orange-600"
           >
             Get Started
           </Link>
@@ -144,7 +164,7 @@ export default function Header() {
 
                 {link.children ? (
                   <div className="mt-2 flex flex-col gap-2 border-l-2 border-orange-100 pl-4">
-                    {link.children.slice(0, -1).map((child) => (
+                    {link.children.map((child) => (
                       <Link
                         key={child.href}
                         href={child.href}
@@ -159,15 +179,13 @@ export default function Header() {
               </div>
             ))}
             <div className="flex flex-col gap-2 pt-4 border-t border-slate-100">
-              <a
-                href={trialWhatsAppHref}
-                target="_blank"
-                rel="noreferrer"
+              <Link
+                href="/iptv-uk-free-trial"
                 onClick={() => setMobileMenuOpen(false)}
-                className="rounded-md border border-emerald-300 bg-emerald-50 py-2.5 text-center text-xs font-semibold text-emerald-700 hover:bg-emerald-100 transition"
+                className="rounded-md border border-emerald-300 bg-emerald-50 py-2.5 text-center text-xs font-semibold text-emerald-700 transition hover:bg-emerald-100"
               >
                 24hr Free Trial
-              </a>
+              </Link>
               <Link
                 href="/pricing"
                 onClick={() => setMobileMenuOpen(false)}
