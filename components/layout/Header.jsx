@@ -18,6 +18,8 @@ const links = [
     href: '/installation-guide',
     children: [
       { label: 'IPTV for Firestick', href: '/iptv-firestick-subscription-uk' },
+      { label: 'IPTV for Android TV', href: '/iptv-for-android-tv-uk' },
+      { label: 'IPTV for PC', href: '/iptv-for-pc-uk' },
       ...guideNav
         .filter((item) => deviceGuides.includes(item.slug))
         .map((item) => ({ label: item.label, href: guideHref(item.slug) })),

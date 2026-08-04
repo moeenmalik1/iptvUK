@@ -1,3 +1,4 @@
+import { devices } from '../data/devices';
 import { guideHref, guides } from '../data/guides';
 
 const SITE_URL = 'https://www.iptvuk.buzz';
@@ -26,6 +27,12 @@ export default function sitemap() {
       lastModified: now,
       changeFrequency: 'weekly',
       priority: route.priority
+    })),
+    ...devices.map((device) => ({
+      url: `${SITE_URL}/${device.slug}`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.9
     })),
     ...guides.map((guide) => ({
       url: `${SITE_URL}${guideHref(guide.slug)}`,
