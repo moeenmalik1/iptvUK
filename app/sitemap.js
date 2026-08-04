@@ -1,4 +1,4 @@
-import { guides } from '../data/guides';
+import { guideHref, guides } from '../data/guides';
 
 const SITE_URL = 'https://www.iptvuk.buzz';
 
@@ -26,7 +26,7 @@ export default function sitemap() {
       priority: route.priority
     })),
     ...guides.map((guide) => ({
-      url: `${SITE_URL}/guides/${guide.slug}`,
+      url: `${SITE_URL}${guideHref(guide.slug)}`,
       lastModified: new Date(guide.updatedIso),
       changeFrequency: 'monthly',
       priority: 0.7

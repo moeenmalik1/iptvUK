@@ -78,7 +78,7 @@ export const iptvForIphone = {
       type: 'p',
       text: [
         'You may still see iPhone apps using names such as "Tivimate," "TiviMato," or "Tivimax," but they come from unrelated developers. For example, one UK App Store listing called "Smarters player: Tivimate IPTV" is published by Said Saber, while Tivimax IPTV Player is published by AFIFA CHAUHDARY. Neither listing is the official TiViMate app. Check the developer name before downloading, paying for an upgrade, or entering your IPTV login details. An existing TiViMate purchase will not automatically unlock any of these iOS players. If you want TiViMate properly, you need an Android device — see our ',
-        { text: 'Android TV box guide', href: '/guides/best-android-tv-box-iptv-uk' },
+        { text: 'Android TV box guide', href: '/best-android-tv-box-iptv-uk' },
         '.'
       ]
     },

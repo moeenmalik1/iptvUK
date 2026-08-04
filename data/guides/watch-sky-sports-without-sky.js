@@ -112,7 +112,7 @@ export const watchSkySportsWithoutSky = {
       title: 'Verdict',
       text: [
         'Choose Sky Stream when your household will use the entertainment channels, Netflix and Sky interface alongside the sport. It suits renters, flats where dishes are not allowed and homes moving away from satellite equipment. Viewers who only want a few matches or races may end up paying for a package they rarely use. Compare the regular price of around £48 a month, or roughly £53 for flexible access, rather than relying on a short-term promotional offer. If you are leaving Sky altogether, our ',
-        { text: 'Sky TV cancellation guide', href: '/guides/how-to-cancel-sky-tv-uk' },
+        { text: 'Sky TV cancellation guide', href: '/how-to-cancel-sky-tv-uk' },
         ' covers notice periods and equipment returns.'
       ]
     },

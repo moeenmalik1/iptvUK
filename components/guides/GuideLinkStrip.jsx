@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { getGuide } from '../../data/guides';
+import { getGuide, guideHref } from '../../data/guides';
 
 // Compact cross-link strip for non-guide pages (setup guide, pricing, channels).
 export default function GuideLinkStrip({ slugs, title = 'Keep reading', description, dark = false }) {
@@ -27,7 +27,7 @@ export default function GuideLinkStrip({ slugs, title = 'Keep reading', descript
         {items.map((guide) => (
           <Link
             key={guide.slug}
-            href={`/guides/${guide.slug}`}
+            href={guideHref(guide.slug)}
             className={`group rounded-2xl border p-4 transition ${
               dark
                 ? 'border-white/10 bg-slate-950/40 hover:border-orange-400/40'

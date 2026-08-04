@@ -215,7 +215,7 @@ export const howToCancelSkyTv = {
       type: 'p',
       text: [
         'IPTV simply means television delivered over the internet. Legitimate services such as NOW and Freely already rely on internet delivery. The risk comes from providers selling premium channels or sport without the necessary rights. Extremely cheap packages should be checked carefully. Look for clear company information, legitimate content rights, transparent pricing and normal payment protections before subscribing. A low price alone is not enough to judge whether an IPTV service is legitimate or reliable. Our ',
-        { text: 'IPTV vs Netflix comparison', href: '/guides/iptv-vs-netflix-uk' },
+        { text: 'IPTV vs Netflix comparison', href: '/iptv-vs-netflix-uk' },
         ' explains where each format fits.'
       ]
     },

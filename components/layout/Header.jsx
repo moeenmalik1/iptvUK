@@ -8,15 +8,18 @@ import { getWhatsAppLink } from '../../lib/whatsapp';
 
 const trialWhatsAppHref = getWhatsAppLink("Hi, I'd like to claim my 24 Hours Free Trial.");
 
+// `secondary` links duplicate on-page anchors, so they drop off the desktop bar
+// on narrower screens to keep the primary pages visible. All of them still
+// appear in the mobile drawer.
 const links = [
   { label: 'Home', href: '/' },
   { label: 'Channels', href: '/channels' },
   { label: 'Installation Guide', href: '/installation-guide' },
   { label: 'Guides', href: '/guides' },
-  { label: 'Services', href: '/#services' },
   { label: 'Pricing', href: '/pricing' },
-  { label: 'Features', href: '#features' },
-  { label: 'FAQ', href: '#faq' },
+  { label: 'Services', href: '/#services', secondary: true },
+  { label: 'Features', href: '#features', secondary: true },
+  { label: 'FAQ', href: '#faq', secondary: true },
   { label: 'Contact', href: '/#contact' }
 ];
 
@@ -48,16 +51,20 @@ export default function Header() {
         </Link>
         
         {/* Desktop Navigation */}
-        <nav className="hidden items-center gap-4 text-sm font-medium text-slate-600 lg:flex">
+        <nav className="hidden items-center gap-3 text-sm font-medium text-slate-600 md:flex lg:gap-4">
           {links.map((link) => (
-            <Link key={link.label} href={resolveHref(link.href)} className="transition hover:text-orange-500">
+            <Link
+              key={link.label}
+              href={resolveHref(link.href)}
+              className={`transition hover:text-orange-500 ${link.secondary ? 'hidden xl:inline' : ''}`}
+            >
               {link.label}
             </Link>
           ))}
         </nav>
 
         {/* Action Buttons */}
-        <div className="hidden items-center gap-2 lg:flex">
+        <div className="hidden items-center gap-2 md:flex">
           <a
             href={trialWhatsAppHref}
             target="_blank"
@@ -77,7 +84,7 @@ export default function Header() {
         {/* Mobile Hamburger Button */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="flex h-10 w-10 items-center justify-center rounded-md border border-slate-200 text-slate-700 lg:hidden hover:bg-slate-50 transition"
+          className="flex h-10 w-10 items-center justify-center rounded-md border border-slate-200 text-slate-700 md:hidden hover:bg-slate-50 transition"
           aria-label="Toggle menu"
         >
           {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -86,7 +93,7 @@ export default function Header() {
 
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
-        <div className="border-t border-slate-200 bg-white px-4 py-4 lg:hidden shadow-lg">
+        <div className="border-t border-slate-200 bg-white px-4 py-4 md:hidden shadow-lg">
           <nav className="flex flex-col gap-4 text-sm font-medium text-slate-600">
             {links.map((link) => (
               <Link

@@ -1,16 +1,16 @@
 {
   "/_not-found/page": "app/_not-found/page.js",
-  "/cookies/page": "app/cookies/page.js",
   "/channels/page": "app/channels/page.js",
+  "/cookies/page": "app/cookies/page.js",
   "/icon.svg/route": "app/icon.svg/route.js",
   "/page": "app/page.js",
-  "/pricing/page": "app/pricing/page.js",
   "/privacy/page": "app/privacy/page.js",
-  "/terms/page": "app/terms/page.js",
-  "/sitemap.xml/route": "app/sitemap.xml/route.js",
+  "/pricing/page": "app/pricing/page.js",
   "/refund/page": "app/refund/page.js",
   "/status/page": "app/status/page.js",
+  "/terms/page": "app/terms/page.js",
+  "/sitemap.xml/route": "app/sitemap.xml/route.js",
   "/installation-guide/page": "app/installation-guide/page.js",
-  "/guides/[slug]/page": "app/guides/[slug]/page.js",
+  "/[guideSlug]/page": "app/[guideSlug]/page.js",
   "/guides/page": "app/guides/page.js"
 }

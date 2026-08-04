@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { guideHref } from '../../data/guides';
 
 export default function GuideCard({ guide, featured = false }) {
   return (
@@ -7,7 +8,7 @@ export default function GuideCard({ guide, featured = false }) {
         featured ? 'md:flex-row' : ''
       }`}
     >
-      <Link href={`/guides/${guide.slug}`} className={`block shrink-0 bg-slate-950 ${featured ? 'md:w-1/2' : ''}`}>
+      <Link href={guideHref(guide.slug)} className={`block shrink-0 bg-slate-950 ${featured ? 'md:w-1/2' : ''}`}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={guide.image}
@@ -26,7 +27,7 @@ export default function GuideCard({ guide, featured = false }) {
         </div>
 
         <h3 className={`mt-4 font-black leading-tight text-slate-900 ${featured ? 'text-2xl sm:text-3xl' : 'text-xl'}`}>
-          <Link href={`/guides/${guide.slug}`} className="transition hover:text-orange-600">
+          <Link href={guideHref(guide.slug)} className="transition hover:text-orange-600">
             {guide.title}
           </Link>
         </h3>
@@ -36,7 +37,7 @@ export default function GuideCard({ guide, featured = false }) {
         <div className="mt-5 flex items-center justify-between gap-4">
           <span className="text-xs text-slate-400">Updated {guide.updatedLabel}</span>
           <Link
-            href={`/guides/${guide.slug}`}
+            href={guideHref(guide.slug)}
             className="text-sm font-semibold text-orange-600 transition group-hover:text-orange-700"
           >
             Read guide →

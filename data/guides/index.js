@@ -14,6 +14,12 @@ export const guides = [
   watchSkySportsWithoutSky
 ];
 
+// Guides live at the site root (/best-android-tv-box-iptv-uk), matching the
+// flat URLs used by /channels, /pricing and /installation-guide.
+export function guideHref(slug) {
+  return `/${slug}`;
+}
+
 export function getGuide(slug) {
   return guides.find((guide) => guide.slug === slug);
 }
