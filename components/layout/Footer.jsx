@@ -15,7 +15,7 @@ const columns = [
     title: 'Quick Links',
     links: [
       { label: 'Pricing', href: '/pricing' },
-      { label: 'Free Trial', href: '/pricing#plans' },
+      { label: 'Free 24hr Trial', href: '/iptv-uk-free-trial' },
       { label: 'Channels', href: '/channels' },
       { label: 'IPTV for Firestick', href: '/iptv-firestick-subscription-uk' },
       { label: 'Setup Guide', href: '/installation-guide' },

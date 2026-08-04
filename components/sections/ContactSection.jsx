@@ -42,20 +42,20 @@ Message: ${message || '[Your message]'}`;
   return (
     <section id="contact" className="bg-white py-16">
       <div className="mx-auto grid w-full max-w-6xl gap-8 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
-        <article className="rounded-xl border border-slate-200 bg-slate-50 p-8 shadow-sm">
+        <article className="min-w-0 rounded-xl border border-slate-200 bg-slate-50 p-6 shadow-sm sm:p-8">
           <h2 className="text-4xl font-extrabold text-slate-900">Get in Touch</h2>
 
           <div className="mt-9 space-y-8 text-slate-700">
             {contactDetails.map((item) => {
               const Icon = item.icon;
               return (
-                <div key={item.title} className="flex gap-4">
+                <div key={item.title} className="flex min-w-0 gap-4">
                   <div className="mt-1 text-orange-500">
                     <Icon className="h-7 w-7" aria-hidden="true" />
                   </div>
                   <div>
                     <h3 className="text-3xl font-bold text-slate-900">{item.title}</h3>
-                    <p className="mt-2 text-2xl">{item.value}</p>
+                    <p className="mt-2 break-words text-2xl">{item.value}</p>
                     <p className="mt-1 text-2xl">{item.note}</p>
                   </div>
                 </div>
@@ -73,7 +73,7 @@ Message: ${message || '[Your message]'}`;
           </div>
         </article>
 
-        <article className="rounded-xl border border-slate-200 bg-slate-50 p-8 shadow-sm">
+        <article className="min-w-0 rounded-xl border border-slate-200 bg-slate-50 p-6 shadow-sm sm:p-8">
           <h2 className="text-4xl font-extrabold text-slate-900">Send Us a Message (via WhatsApp)</h2>
           <form className="mt-8 space-y-5">
             <label className="block">
