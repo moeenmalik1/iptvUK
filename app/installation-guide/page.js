@@ -1,16 +1,29 @@
 import Footer from '../../components/layout/Footer';
 import Header from '../../components/layout/Header';
 import InstallationGuideSection from '../../components/sections/InstallationGuideSection';
+import { getInstallationPageSchema } from '../../lib/schema';
 
 export const metadata = {
-  title: 'Setting IPTV UK | IPTV Setup Guide for Firestick, Smart TV, Android & iPhone',
+  title: 'IPTV Setup Guide UK | How to Install IPTV on Firestick, Smart TV & Android',
   description:
-    'Learn how to set up IPTV UK on Firestick, Smart TV, Android, iPhone, Windows, and Mac. Complete IPTV setup guide with apps, troubleshooting, and streaming tips.'
+    'Step-by-step IPTV setup guide for the UK. Install IPTV on Firestick, Android TV, Smart TVs, iPhone, iPad, Windows, Mac and MAG boxes, with player recommendations and buffering fixes.',
+  alternates: { canonical: '/installation-guide' },
+  openGraph: {
+    type: 'website',
+    title: 'IPTV Setup Guide UK | Install IPTV on Any Device',
+    description:
+      'Step-by-step IPTV installation for Firestick, Android TV, Smart TVs, iPhone, Windows and MAG boxes.',
+    url: '/installation-guide'
+  }
 };
 
 export default function InstallationGuidePage() {
   return (
     <main className="bg-white text-slate-900">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(getInstallationPageSchema()) }}
+      />
       <Header />
       <InstallationGuideSection />
       <Footer />

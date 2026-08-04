@@ -354,6 +354,38 @@ export default function DevicePage({ device }) {
         </div>
       </section>
 
+      {/* Other devices */}
+      <section className="bg-white pb-14 sm:pb-20">
+        <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-black tracking-tight text-slate-900 sm:text-3xl">
+            Watching on another device?
+          </h2>
+          <p className="mt-3 max-w-3xl text-sm leading-7 text-slate-600 sm:text-base">
+            The same subscription works across every platform we support. These pages cover setup, compatible players
+            and troubleshooting for each one.
+          </p>
+          <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              { label: 'IPTV for Firestick', href: '/iptv-firestick-subscription-uk' },
+              { label: 'IPTV for Android TV', href: '/iptv-for-android-tv-uk' },
+              { label: 'IPTV for PC', href: '/iptv-for-pc-uk' },
+              { label: 'IPTV for iPhone', href: '/iptv-for-iphone-uk' }
+            ]
+              .filter((item) => item.href !== `/${device.slug}`)
+              .concat([{ label: 'All device setup', href: '/installation-guide' }])
+              .map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-4 text-sm font-semibold text-slate-700 transition hover:border-orange-300 hover:text-orange-600"
+                >
+                  {item.label} →
+                </Link>
+              ))}
+          </div>
+        </div>
+      </section>
+
       {/* Closing CTA */}
       <section className="bg-white px-4 pb-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-6xl overflow-hidden rounded-[2rem] bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 p-8 text-white shadow-[0_35px_100px_-50px_rgba(15,23,42,0.9)] sm:p-12">

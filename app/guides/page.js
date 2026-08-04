@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Footer from '../../components/layout/Footer';
 import Header from '../../components/layout/Header';
 import GuideCard from '../../components/guides/GuideCard';
+import RelatedLinks from '../../components/layout/RelatedLinks';
 import { guides } from '../../data/guides';
 import { getGuidesIndexSchema } from '../../lib/schema';
 
@@ -85,6 +86,7 @@ export default function GuidesPage() {
         </div>
       </section>
 
+      <RelatedLinks heading="More from IPTV UK" />
       <Footer />
     </main>
   );

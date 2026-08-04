@@ -5,6 +5,21 @@ import GuideLinkStrip from '../../components/guides/GuideLinkStrip';
 import { plans } from '../../data/plans';
 import { pricingFaqs as faqs } from '../../data/faqs';
 import { getWhatsAppLink } from '../../lib/whatsapp';
+import { getPricingPageSchema } from '../../lib/schema';
+
+export const metadata = {
+  title: 'IPTV Subscription UK Prices | Plans from £14.99 with Free Trial',
+  description:
+    'IPTV subscription UK pricing. Compare 1, 3, 6 and 12 month plans from £14.99 with live TV, sports, movies, 4K streaming and multi-device support. Free 24-hour trial, no auto-renewal.',
+  alternates: { canonical: '/pricing' },
+  openGraph: {
+    type: 'website',
+    title: 'IPTV Subscription UK Prices | Plans from £14.99',
+    description:
+      'Compare IPTV UK subscription plans from £14.99. Live TV, sports, movies and 4K on every device, with a free 24-hour trial.',
+    url: '/pricing'
+  }
+};
 
 const includedItems = [
   'Thousands of Live TV Channels',
@@ -114,6 +129,10 @@ export default function PricingPage() {
 
   return (
     <main className="relative overflow-hidden bg-slate-950 text-slate-100">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(getPricingPageSchema()) }}
+      />
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="absolute left-1/2 top-0 h-96 w-96 -translate-x-1/2 rounded-full bg-orange-500/20 blur-3xl" />
         <div className="absolute right-0 top-48 h-80 w-80 rounded-full bg-emerald-400/10 blur-3xl" />
