@@ -3,11 +3,11 @@ export const pcDevice = {
   navLabel: 'IPTV for PC',
   breadcrumb: 'PC & Laptop',
   title: 'IPTV for PC',
-  heading: 'IPTV for PC and Laptop',
-  badge: 'Windows, Mac & Linux',
-  metaTitle: 'IPTV for PC UK | Watch Live TV on Windows, Mac & Laptop',
+  heading: 'IPTV for PC and Windows Laptop',
+  badge: 'Windows PC & Laptop',
+  metaTitle: 'IPTV for PC UK | Watch Live TV on a Windows PC or Laptop',
   metaDescription:
-    'Watch IPTV on your PC or laptop in the UK. Best IPTV players for Windows and Mac, VLC and browser playback, step-by-step setup, HDMI to your TV, and fixes for stuttering playback.',
+    'Watch IPTV on your Windows PC or laptop in the UK. Best IPTV players including IPTV Smarters Expert and VLC, step-by-step setup, HDMI to your TV, and fixes for stuttering playback.',
   image: '/images/devices/iptv-pc.svg',
   imageAlt: 'Laptop and desktop monitor playing live IPTV channels with a programme guide',
   trialMessage: "Hi, I'd like to claim my 24 Hours Free Trial for my PC.",
@@ -18,10 +18,10 @@ export const pcDevice = {
 
   intro: [
     'Your computer is often the quickest way to get IPTV working. There is no app store to fight with, no sideloading, and a proper keyboard for typing long server addresses — which is exactly where most setup mistakes happen on a TV remote.',
-    'IPTV UK works on Windows, macOS, and Linux through a desktop player, VLC, or a browser. Plug the machine into a television over HDMI when you want the big screen, and use the same subscription on your other devices.'
+    'IPTV UK works on Windows through a desktop player, VLC, or a browser. Plug the machine into a television over HDMI when you want the big screen, and use the same subscription on your other devices. On a Mac, see our dedicated macOS setup page.'
   ],
   stats: [
-    { value: 'Win/Mac', label: 'Supported' },
+    { value: 'Win 10/11', label: 'Supported' },
     { value: '5 min', label: 'Typical setup' },
     { value: 'HDMI', label: 'To your TV' },
     { value: 'From £14.99', label: 'Plans' }
@@ -67,7 +67,7 @@ export const pcDevice = {
       ],
       [
         'VLC Media Player',
-        'Windows, Mac, Linux',
+        'Windows',
         'Reliability and testing',
         'Free, open source, and plays almost anything. Open your M3U link and it plays the channel list. No programme guide or pretty menus, but if a stream works anywhere it works in VLC.'
       ],
@@ -84,10 +84,10 @@ export const pcDevice = {
         'Some streams play directly in a browser tab with no install at all. Handy for confirming your details work before setting anything else up.'
       ],
       [
-        'IINA or VLC',
-        'macOS',
-        'Mac users',
-        'IINA is a modern macOS player built on the same engine as VLC. Either handles M3U playlists on Apple Silicon and Intel Macs.'
+        'Kodi with a PVR add-on',
+        'Windows',
+        'A full TV interface',
+        'The closest thing to a set-top box on a computer, with a proper channel list and programme guide. More setup than the others, so try it once the basics work.'
       ]
     ]
   },
@@ -103,7 +103,7 @@ export const pcDevice = {
       },
       {
         title: 'Install a player',
-        body: 'For Windows, install IPTV Smarters Expert from the Microsoft Store for a TV-style layout, or VLC for the simplest possible test. On a Mac, use VLC or IINA. All of them are free to download.'
+        body: 'Install IPTV Smarters Expert from the Microsoft Store for a TV-style layout, or VLC for the simplest possible test. Both are free to download.'
       },
       {
         title: 'Load your playlist',
@@ -119,7 +119,7 @@ export const pcDevice = {
       }
     ],
     requirements: [
-      'Windows 10/11, macOS, or Linux',
+      'Windows 10 or Windows 11',
       'Broadband of roughly 10 Mbps or more',
       'Your IPTV UK login details',
       'A free player such as VLC',
@@ -174,7 +174,7 @@ export const pcDevice = {
     {
       question: 'Does IPTV work on a Mac?',
       answer:
-        'Yes. VLC and IINA both run on macOS, on Apple Silicon and Intel machines, and both open M3U playlists. There are fewer dedicated IPTV apps for macOS than for Windows, but playback itself works exactly the same.'
+        'Yes, though the players differ. IINA and VLC both run natively on Apple Silicon and Intel Macs and open M3U playlists. Our IPTV for Mac page covers macOS setup, AirPlay to an Apple TV and the Gatekeeper prompt you will see on first launch.'
     },
     {
       question: 'Can I use VLC for IPTV?',
@@ -189,7 +189,7 @@ export const pcDevice = {
     {
       question: 'Do I need to install anything unsafe?',
       answer:
-        'No. Everything we recommend comes from the Microsoft Store, the official VLC website, or the developer\'s own site. There is no sideloading, no unknown-sources setting, and nothing that modifies Windows or macOS.'
+        'No. Everything we recommend comes from the Microsoft Store, the official VLC website, or the developer\'s own site. There is no sideloading, no unknown-sources setting, and nothing that modifies Windows.'
     },
     {
       question: 'Why does IPTV stutter on my laptop but work on my phone?',

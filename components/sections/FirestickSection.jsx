@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { deviceNav } from '../../data/devices/nav';
 import { firestickFaqs as faqs } from '../../data/faqs';
 import { plans } from '../../data/plans';
 import { getWhatsAppLink } from '../../lib/whatsapp';
@@ -567,20 +568,18 @@ export default function FirestickSection() {
             The same subscription works across every platform we support.
           </p>
           <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-            {[
-              { label: 'IPTV for Android TV', href: '/iptv-for-android-tv-uk' },
-              { label: 'IPTV for PC', href: '/iptv-for-pc-uk' },
-              { label: 'IPTV for iPhone', href: '/iptv-for-iphone-uk' },
-              { label: 'All device setup', href: '/installation-guide' }
-            ].map((item) => (
+            {deviceNav
+              .filter((item) => item.href !== '/iptv-firestick-subscription-uk')
+              .concat([{ label: 'All device setup', href: '/installation-guide' }])
+              .map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
                 className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-4 text-sm font-semibold text-slate-700 transition hover:border-orange-300 hover:text-orange-600"
               >
                 {item.label} →
-              </Link>
-            ))}
+                </Link>
+              ))}
           </div>
         </div>
       </section>

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { deviceNav } from '../../data/devices/nav';
 import { guideHref, guideNav } from '../../data/guides/nav';
 import { getWhatsAppLink } from '../../lib/whatsapp';
 
@@ -17,9 +18,7 @@ const columns = [
       { label: 'Pricing', href: '/pricing' },
       { label: 'Free 24hr Trial', href: '/iptv-uk-free-trial' },
       { label: 'Channels', href: '/channels' },
-      { label: 'IPTV for Firestick', href: '/iptv-firestick-subscription-uk' },
-      { label: 'IPTV for Android TV', href: '/iptv-for-android-tv-uk' },
-      { label: 'IPTV for PC', href: '/iptv-for-pc-uk' },
+      ...deviceNav,
       { label: 'Setup Guide', href: '/installation-guide' },
       { label: 'Contact', href: '/#contact' }
     ]

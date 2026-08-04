@@ -4,12 +4,14 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { ChevronDown, Menu, X } from 'lucide-react';
+import { deviceNav } from '../../data/devices/nav';
 import { guideHref, guideNav } from '../../data/guides/nav';
 
 // Five top-level tabs, each grouping its own sub-items. Keeping the bar short
 // is what stops it wrapping onto two lines at tablet and laptop widths. The
 // logo doubles as the Home link.
 const deviceGuides = ['best-android-tv-box-iptv-uk', 'iptv-for-iphone-uk'];
+const deviceNavHrefs = new Set(deviceNav.map((item) => item.href));
 
 const links = [
   { label: 'Channels', href: '/channels' },
@@ -17,12 +19,11 @@ const links = [
     label: 'Devices',
     href: '/installation-guide',
     children: [
-      { label: 'IPTV for Firestick', href: '/iptv-firestick-subscription-uk' },
-      { label: 'IPTV for Android TV', href: '/iptv-for-android-tv-uk' },
-      { label: 'IPTV for PC', href: '/iptv-for-pc-uk' },
+      ...deviceNav,
       ...guideNav
         .filter((item) => deviceGuides.includes(item.slug))
-        .map((item) => ({ label: item.label, href: guideHref(item.slug) })),
+        .map((item) => ({ label: item.label, href: guideHref(item.slug) }))
+        .filter((item) => !deviceNavHrefs.has(item.href)),
       { label: 'All device setup', href: '/installation-guide' }
     ]
   },
