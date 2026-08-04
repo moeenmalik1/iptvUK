@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Fire TV Stick plugged into a television streaming live IPTV channels">
+  <defs>
+    <linearGradient id="bgF" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a" />
+      <stop offset="0.55" stop-color="#1e293b" />
+      <stop offset="1" stop-color="#0b1220" />
+    </linearGradient>
+    <linearGradient id="screenF" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f97316" />
+      <stop offset="1" stop-color="#fbbf24" />
+    </linearGradient>
+    <radialGradient id="glowF" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#f97316" stop-opacity="0.42" />
+      <stop offset="1" stop-color="#f97316" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bgF)" />
+  <circle cx="300" cy="130" r="270" fill="url(#glowF)" />
+  <circle cx="950" cy="520" r="230" fill="url(#glowF)" opacity="0.55" />
+
+  <!-- television -->
+  <rect x="210" y="90" width="700" height="410" rx="26" fill="#020617" stroke="#334155" stroke-width="6" />
+  <rect x="242" y="122" width="636" height="346" rx="14" fill="#0b1220" />
+  <rect x="242" y="122" width="636" height="346" rx="14" fill="url(#screenF)" opacity="0.12" />
+
+  <!-- app rail -->
+  <g>
+    <rect x="272" y="152" width="120" height="16" rx="8" fill="#f8fafc" opacity="0.5" />
+    <rect x="272" y="188" width="250" height="130" rx="12" fill="url(#screenF)" />
+    <path d="M368 232l46 30-46 30z" fill="#0f172a" />
+    <rect x="540" y="188" width="150" height="130" rx="12" fill="#f8fafc" opacity="0.14" />
+    <rect x="708" y="188" width="150" height="130" rx="12" fill="#f8fafc" opacity="0.14" />
+
+    <rect x="272" y="342" width="90" height="12" rx="6" fill="#f8fafc" opacity="0.42" />
+    <rect x="272" y="372" width="130" height="72" rx="10" fill="#f8fafc" opacity="0.12" />
+    <rect x="418" y="372" width="130" height="72" rx="10" fill="#f8fafc" opacity="0.12" />
+    <rect x="564" y="372" width="130" height="72" rx="10" fill="#f8fafc" opacity="0.12" />
+    <rect x="710" y="372" width="148" height="72" rx="10" fill="#f8fafc" opacity="0.12" />
+  </g>
+
+  <!-- LIVE badge -->
+  <rect x="272" y="188" width="92" height="30" rx="15" fill="#ef4444" />
+  <circle cx="292" cy="203" r="6" fill="#ffffff" />
+  <text x="322" y="210" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">LIVE</text>
+
+  <!-- stand -->
+  <rect x="500" y="500" width="120" height="16" rx="8" fill="#334155" />
+  <rect x="430" y="516" width="260" height="14" rx="7" fill="#1e293b" />
+
+  <!-- fire tv stick plugging into the side of the TV -->
+  <g transform="translate(910 268)">
+    <rect x="0" y="-26" width="34" height="52" rx="6" fill="#475569" />
+    <rect x="30" y="-34" width="150" height="68" rx="18" fill="#111827" stroke="#f97316" stroke-width="4" />
+    <circle cx="105" cy="0" r="17" fill="#f97316" />
+    <path d="M99 -8l14 8-14 8z" fill="#0f172a" />
+    <rect x="188" y="-6" width="46" height="12" rx="6" fill="#334155" />
+  </g>
+
+  <!-- remote -->
+  <g transform="translate(70 330)">
+    <rect x="0" y="0" width="88" height="250" rx="34" fill="#111827" stroke="#334155" stroke-width="4" />
+    <circle cx="44" cy="62" r="26" fill="none" stroke="#f97316" stroke-width="6" />
+    <circle cx="44" cy="62" r="10" fill="#f97316" />
+    <rect x="24" y="112" width="40" height="10" rx="5" fill="#475569" />
+    <rect x="24" y="140" width="40" height="10" rx="5" fill="#475569" />
+    <rect x="24" y="168" width="40" height="10" rx="5" fill="#475569" />
+    <rect x="24" y="196" width="40" height="10" rx="5" fill="#475569" />
+  </g>
+
+  <!-- wifi arcs -->
+  <g stroke="#38bdf8" stroke-width="6" fill="none" stroke-linecap="round" opacity="0.75" transform="translate(1085 150)">
+    <path d="M0 40a44 44 0 0 1 0-62" />
+    <path d="M-26 62a80 80 0 0 1 0-106" opacity="0.6" />
+    <path d="M-52 84a116 116 0 0 1 0-150" opacity="0.4" />
+  </g>
+</svg>

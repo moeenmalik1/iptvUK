@@ -3,20 +3,33 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, X } from 'lucide-react';
+import { ChevronDown, Menu, X } from 'lucide-react';
+import { guideHref, guideNav } from '../../data/guides/nav';
 import { getWhatsAppLink } from '../../lib/whatsapp';
 
 const trialWhatsAppHref = getWhatsAppLink("Hi, I'd like to claim my 24 Hours Free Trial.");
 
+// `secondary` links duplicate on-page anchors, so they drop off the desktop bar
+// on narrower screens to keep the primary pages visible. All of them still
+// appear in the mobile drawer.
 const links = [
   { label: 'Home', href: '/' },
   { label: 'Channels', href: '/channels' },
+  { label: 'Firestick', href: '/iptv-firestick-subscription-uk' },
   { label: 'Installation Guide', href: '/installation-guide' },
-  { label: 'Services', href: '/#services' },
+  {
+    label: 'Guides',
+    href: '/guides',
+    children: [
+      ...guideNav.map((item) => ({ label: item.label, href: guideHref(item.slug) })),
+      { label: 'All guides', href: '/guides' }
+    ]
+  },
   { label: 'Pricing', href: '/pricing' },
-  { label: 'Features', href: '#features' },
-  { label: 'FAQ', href: '#faq' },
-  { label: 'Contact', href: '/#contact' }
+  { label: 'Services', href: '/#services', secondary: true },
+  { label: 'Features', href: '#features', secondary: true },
+  { label: 'FAQ', href: '#faq', secondary: true },
+  { label: 'Contact', href: '/#contact', secondary: true }
 ];
 
 export default function Header() {
@@ -47,12 +60,44 @@ export default function Header() {
         </Link>
         
         {/* Desktop Navigation */}
-        <nav className="hidden items-center gap-5 text-sm font-medium text-slate-600 md:flex">
-          {links.map((link) => (
-            <Link key={link.label} href={resolveHref(link.href)} className="transition hover:text-orange-500">
-              {link.label}
-            </Link>
-          ))}
+        <nav className="hidden items-center gap-3 text-sm font-medium text-slate-600 md:flex lg:gap-4">
+          {links.map((link) =>
+            link.children ? (
+              // Opens on hover and on keyboard focus, so the submenu is reachable
+              // without JavaScript state.
+              <div key={link.label} className="group relative">
+                <Link
+                  href={resolveHref(link.href)}
+                  className="flex items-center gap-1 transition hover:text-orange-500 group-hover:text-orange-500"
+                >
+                  {link.label}
+                  <ChevronDown className="h-3.5 w-3.5 transition group-hover:rotate-180" />
+                </Link>
+
+                <div className="invisible absolute left-1/2 top-full z-50 w-60 -translate-x-1/2 pt-3 opacity-0 transition group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+                  <div className="overflow-hidden rounded-xl border border-slate-200 bg-white py-2 shadow-[0_25px_60px_-25px_rgba(15,23,42,0.35)]">
+                    {link.children.map((child) => (
+                      <Link
+                        key={child.href}
+                        href={child.href}
+                        className="block px-4 py-2.5 text-sm text-slate-600 transition hover:bg-orange-50 hover:text-orange-600"
+                      >
+                        {child.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <Link
+                key={link.label}
+                href={resolveHref(link.href)}
+                className={`transition hover:text-orange-500 ${link.secondary ? 'hidden xl:inline' : ''}`}
+              >
+                {link.label}
+              </Link>
+            )
+          )}
         </nav>
 
         {/* Action Buttons */}
@@ -88,14 +133,30 @@ export default function Header() {
         <div className="border-t border-slate-200 bg-white px-4 py-4 md:hidden shadow-lg">
           <nav className="flex flex-col gap-4 text-sm font-medium text-slate-600">
             {links.map((link) => (
-              <Link
-                key={link.label}
-                href={resolveHref(link.href)}
-                onClick={() => setMobileMenuOpen(false)}
-                className="transition hover:text-orange-500 py-1"
-              >
-                {link.label}
-              </Link>
+              <div key={link.label} className="flex flex-col">
+                <Link
+                  href={resolveHref(link.href)}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="transition hover:text-orange-500 py-1"
+                >
+                  {link.label}
+                </Link>
+
+                {link.children ? (
+                  <div className="mt-2 flex flex-col gap-2 border-l-2 border-orange-100 pl-4">
+                    {link.children.slice(0, -1).map((child) => (
+                      <Link
+                        key={child.href}
+                        href={child.href}
+                        onClick={() => setMobileMenuOpen(false)}
+                        className="text-[13px] text-slate-500 transition hover:text-orange-500"
+                      >
+                        {child.label}
+                      </Link>
+                    ))}
+                  </div>
+                ) : null}
+              </div>
             ))}
             <div className="flex flex-col gap-2 pt-4 border-t border-slate-100">
               <a

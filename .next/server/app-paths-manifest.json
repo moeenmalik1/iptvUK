@@ -1,12 +1,17 @@
 {
   "/_not-found/page": "app/_not-found/page.js",
   "/channels/page": "app/channels/page.js",
-  "/pricing/page": "app/pricing/page.js",
   "/cookies/page": "app/cookies/page.js",
+  "/icon.svg/route": "app/icon.svg/route.js",
+  "/page": "app/page.js",
+  "/pricing/page": "app/pricing/page.js",
   "/privacy/page": "app/privacy/page.js",
   "/refund/page": "app/refund/page.js",
-  "/terms/page": "app/terms/page.js",
   "/status/page": "app/status/page.js",
-  "/page": "app/page.js",
-  "/installation-guide/page": "app/installation-guide/page.js"
+  "/terms/page": "app/terms/page.js",
+  "/sitemap.xml/route": "app/sitemap.xml/route.js",
+  "/[guideSlug]/page": "app/[guideSlug]/page.js",
+  "/iptv-firestick-subscription-uk/page": "app/iptv-firestick-subscription-uk/page.js",
+  "/installation-guide/page": "app/installation-guide/page.js",
+  "/guides/page": "app/guides/page.js"
 }

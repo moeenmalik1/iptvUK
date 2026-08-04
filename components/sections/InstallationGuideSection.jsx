@@ -1,3 +1,4 @@
+import GuideLinkStrip from '../guides/GuideLinkStrip';
 import { getWhatsAppLink } from '../../lib/whatsapp';
 import { installationFaqs as faqs } from '../../data/faqs';
 
@@ -44,7 +45,15 @@ const apps = [
 const setupGuides = [
   {
     title: 'Setting IPTV UK on Amazon Firestick',
-    intro: 'Firestick remains one of the most popular devices for IPTV streaming in the UK.',
+    intro: (
+      <>
+        Firestick remains one of the most popular devices for IPTV streaming in the UK. See our{' '}
+        <a href="/iptv-firestick-subscription-uk" className={whatsAppLinkClasses}>
+          IPTV Firestick subscription page
+        </a>{' '}
+        for supported models, plans and buffering fixes.
+      </>
+    ),
     label: 'Steps',
     accent: 'from-orange-500 to-amber-400',
     steps: [
@@ -403,6 +412,14 @@ export default function InstallationGuideSection() {
             Whether you're looking for a best IPTV UK solution, a reliable IPTV provider, or a flexible IPTV
             subscription, our service is designed to deliver a premium viewing experience.
           </p>
+        </div>
+
+        <div className="mt-12">
+          <GuideLinkStrip
+            slugs={['best-android-tv-box-iptv-uk', 'iptv-for-iphone-uk', 'how-to-watch-sky-sports-without-sky-tv']}
+            title="Choosing a device or a player?"
+            description="These guides go deeper than the steps above — which box to buy, which iOS player to install, and how to get live sport without a satellite package."
+          />
         </div>
 
         <div className="mt-12 grid gap-6 lg:grid-cols-[1fr_0.82fr]">

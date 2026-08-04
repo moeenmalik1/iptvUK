@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Cancelling a UK pay TV subscription and returning equipment">
+  <defs>
+    <linearGradient id="bgC" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a" />
+      <stop offset="0.5" stop-color="#1e293b" />
+      <stop offset="1" stop-color="#0b1220" />
+    </linearGradient>
+    <radialGradient id="glowC" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#f43f5e" stop-opacity="0.38" />
+      <stop offset="1" stop-color="#f43f5e" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="glowC2" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#f97316" stop-opacity="0.35" />
+      <stop offset="1" stop-color="#f97316" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bgC)" />
+  <circle cx="880" cy="150" r="260" fill="url(#glowC)" />
+  <circle cx="260" cy="500" r="240" fill="url(#glowC2)" />
+
+  <!-- bill / statement -->
+  <g transform="rotate(-5 340 315)">
+    <rect x="180" y="110" width="330" height="420" rx="20" fill="#f8fafc" />
+    <rect x="216" y="156" width="150" height="18" rx="9" fill="#0f172a" opacity="0.85" />
+    <rect x="216" y="190" width="96" height="12" rx="6" fill="#94a3b8" />
+
+    <rect x="216" y="238" width="258" height="10" rx="5" fill="#e2e8f0" />
+    <rect x="216" y="266" width="220" height="10" rx="5" fill="#e2e8f0" />
+    <rect x="216" y="294" width="240" height="10" rx="5" fill="#e2e8f0" />
+    <rect x="216" y="322" width="180" height="10" rx="5" fill="#e2e8f0" />
+
+    <rect x="216" y="366" width="258" height="2" fill="#cbd5e1" />
+    <rect x="216" y="392" width="120" height="16" rx="8" fill="#94a3b8" />
+    <rect x="376" y="386" width="98" height="28" rx="8" fill="#f43f5e" opacity="0.9" />
+
+    <rect x="216" y="444" width="258" height="10" rx="5" fill="#e2e8f0" />
+    <rect x="216" y="472" width="160" height="10" rx="5" fill="#e2e8f0" />
+  </g>
+
+  <!-- cancelled stamp -->
+  <g transform="rotate(-14 660 300)">
+    <rect x="520" y="250" width="290" height="98" rx="16" fill="none" stroke="#f43f5e" stroke-width="8" opacity="0.95" />
+    <text x="665" y="315" font-family="Arial, Helvetica, sans-serif" font-size="52" font-weight="bold" fill="#f43f5e" text-anchor="middle" letter-spacing="4">CANCEL</text>
+  </g>
+
+  <!-- calendar 31 days notice -->
+  <g transform="translate(880 120)">
+    <rect x="0" y="0" width="220" height="200" rx="20" fill="#111827" stroke="#334155" stroke-width="4" />
+    <rect x="0" y="0" width="220" height="52" rx="20" fill="#f97316" />
+    <rect x="0" y="36" width="220" height="16" fill="#f97316" />
+    <circle cx="56" cy="26" r="8" fill="#0f172a" opacity="0.4" />
+    <circle cx="164" cy="26" r="8" fill="#0f172a" opacity="0.4" />
+    <text x="110" y="146" font-family="Arial, Helvetica, sans-serif" font-size="72" font-weight="bold" fill="#f8fafc" text-anchor="middle">31</text>
+    <text x="110" y="180" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#94a3b8" text-anchor="middle" letter-spacing="2">DAYS NOTICE</text>
+  </g>
+
+  <!-- return box -->
+  <g transform="translate(860 400)">
+    <rect x="0" y="40" width="250" height="150" rx="12" fill="#a16207" opacity="0.9" />
+    <rect x="0" y="40" width="250" height="40" rx="8" fill="#ca8a04" opacity="0.9" />
+    <rect x="110" y="40" width="30" height="150" fill="#eab308" opacity="0.55" />
+    <rect x="24" y="112" width="70" height="10" rx="5" fill="#fef9c3" opacity="0.7" />
+    <rect x="24" y="134" width="50" height="10" rx="5" fill="#fef9c3" opacity="0.5" />
+  </g>
+</svg>
