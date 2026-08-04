@@ -18,6 +18,8 @@ const columns = [
       { label: 'Free 24hr Trial', href: '/iptv-uk-free-trial' },
       { label: 'Channels', href: '/channels' },
       { label: 'IPTV for Firestick', href: '/iptv-firestick-subscription-uk' },
+      { label: 'IPTV for Android TV', href: '/iptv-for-android-tv-uk' },
+      { label: 'IPTV for PC', href: '/iptv-for-pc-uk' },
       { label: 'Setup Guide', href: '/installation-guide' },
       { label: 'Contact', href: '/#contact' }
     ]

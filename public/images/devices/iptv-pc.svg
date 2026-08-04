@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Laptop and monitor playing live IPTV channels">
+  <defs>
+    <linearGradient id="bgP" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a"/><stop offset="0.55" stop-color="#1e293b"/><stop offset="1" stop-color="#0b1220"/>
+    </linearGradient>
+    <linearGradient id="scP" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f97316"/><stop offset="1" stop-color="#fbbf24"/>
+    </linearGradient>
+    <radialGradient id="glP" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#38bdf8" stop-opacity="0.4"/><stop offset="1" stop-color="#38bdf8" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bgP)"/>
+  <circle cx="880" cy="140" r="280" fill="url(#glP)"/>
+  <circle cx="240" cy="520" r="240" fill="url(#glP)" opacity="0.5"/>
+
+  <!-- monitor -->
+  <rect x="560" y="90" width="560" height="340" rx="20" fill="#020617" stroke="#334155" stroke-width="6"/>
+  <rect x="586" y="116" width="508" height="288" rx="10" fill="#0b1220"/>
+  <rect x="586" y="116" width="508" height="288" rx="10" fill="url(#scP)" opacity="0.12"/>
+  <rect x="612" y="142" width="300" height="150" rx="10" fill="url(#scP)" opacity="0.9"/>
+  <path d="M736 190l44 28-44 28z" fill="#0f172a"/>
+  <rect x="936" y="142" width="132" height="70" rx="8" fill="#f8fafc" opacity="0.14"/>
+  <rect x="936" y="222" width="132" height="70" rx="8" fill="#f8fafc" opacity="0.14"/>
+  <rect x="612" y="312" width="456" height="14" rx="7" fill="#f8fafc" opacity="0.3"/>
+  <rect x="612" y="340" width="200" height="14" rx="7" fill="#f97316" opacity="0.7"/>
+  <rect x="612" y="368" width="330" height="14" rx="7" fill="#f8fafc" opacity="0.15"/>
+  <rect x="790" y="430" width="100" height="16" rx="8" fill="#334155"/>
+  <rect x="730" y="446" width="220" height="14" rx="7" fill="#1e293b"/>
+
+  <!-- laptop -->
+  <rect x="110" y="200" width="420" height="260" rx="16" fill="#020617" stroke="#334155" stroke-width="5"/>
+  <rect x="132" y="222" width="376" height="216" rx="8" fill="#0b1220"/>
+  <rect x="132" y="222" width="376" height="216" rx="8" fill="url(#scP)" opacity="0.1"/>
+  <rect x="156" y="246" width="150" height="12" rx="6" fill="#f8fafc" opacity="0.45"/>
+  <rect x="156" y="272" width="328" height="96" rx="8" fill="url(#scP)" opacity="0.75"/>
+  <path d="M300 302l34 22-34 22z" fill="#0f172a"/>
+  <rect x="156" y="384" width="200" height="10" rx="5" fill="#f8fafc" opacity="0.25"/>
+  <rect x="156" y="404" width="140" height="10" rx="5" fill="#f8fafc" opacity="0.15"/>
+  <path d="M80 460h480l30 40H50z" fill="#1e293b"/>
+  <rect x="270" y="474" width="100" height="10" rx="5" fill="#334155"/>
+
+  <!-- hdmi cable to monitor -->
+  <path d="M530 400C580 400 570 330 600 330" stroke="#f97316" stroke-width="6" fill="none" stroke-linecap="round" opacity="0.8"/>
+</svg>
