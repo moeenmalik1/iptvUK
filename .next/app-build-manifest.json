@@ -12,7 +12,7 @@
       "static/chunks/fd9d1056-06fe44696aec3f50.js",
       "static/chunks/117-80b09a1b7c4264e1.js",
       "static/chunks/main-app-4a043f54497f34ba.js",
-      "static/css/1fd20b2064809971.css",
+      "static/css/c77524555f706249.css",
       "static/chunks/app/layout-dc11c38bd69d0413.js"
     ],
     "/channels/page": [
@@ -21,7 +21,8 @@
       "static/chunks/117-80b09a1b7c4264e1.js",
       "static/chunks/main-app-4a043f54497f34ba.js",
       "static/chunks/151-3f15f459f769c6b7.js",
-      "static/chunks/app/channels/page-63d2b529d7a5f3ed.js"
+      "static/chunks/763-2310a1ca99e0c8bf.js",
+      "static/chunks/app/channels/page-438e6704ce5f9158.js"
     ],
     "/cookies/page": [
       "static/chunks/webpack-c81f7fd28659d64f.js",
@@ -29,7 +30,73 @@
       "static/chunks/117-80b09a1b7c4264e1.js",
       "static/chunks/main-app-4a043f54497f34ba.js",
       "static/chunks/151-3f15f459f769c6b7.js",
-      "static/chunks/app/cookies/page-5f0da2c2842223dd.js"
+      "static/chunks/763-2310a1ca99e0c8bf.js",
+      "static/chunks/app/cookies/page-62f34ea874efa0fb.js"
+    ],
+    "/iptv-for-android-tv-uk/page": [
+      "static/chunks/webpack-c81f7fd28659d64f.js",
+      "static/chunks/fd9d1056-06fe44696aec3f50.js",
+      "static/chunks/117-80b09a1b7c4264e1.js",
+      "static/chunks/main-app-4a043f54497f34ba.js",
+      "static/chunks/151-3f15f459f769c6b7.js",
+      "static/chunks/app/iptv-for-android-tv-uk/page-5327b19533c76b1b.js"
+    ],
+    "/[guideSlug]/page": [
+      "static/chunks/webpack-c81f7fd28659d64f.js",
+      "static/chunks/fd9d1056-06fe44696aec3f50.js",
+      "static/chunks/117-80b09a1b7c4264e1.js",
+      "static/chunks/main-app-4a043f54497f34ba.js",
+      "static/chunks/151-3f15f459f769c6b7.js",
+      "static/chunks/app/[guideSlug]/page-79ce33b4fa71b6dd.js"
+    ],
+    "/iptv-for-pc-uk/page": [
+      "static/chunks/webpack-c81f7fd28659d64f.js",
+      "static/chunks/fd9d1056-06fe44696aec3f50.js",
+      "static/chunks/117-80b09a1b7c4264e1.js",
+      "static/chunks/main-app-4a043f54497f34ba.js",
+      "static/chunks/151-3f15f459f769c6b7.js",
+      "static/chunks/app/iptv-for-pc-uk/page-dd4c80ea5d3d1594.js"
+    ],
+    "/installation-guide/page": [
+      "static/chunks/webpack-c81f7fd28659d64f.js",
+      "static/chunks/fd9d1056-06fe44696aec3f50.js",
+      "static/chunks/117-80b09a1b7c4264e1.js",
+      "static/chunks/main-app-4a043f54497f34ba.js",
+      "static/chunks/151-3f15f459f769c6b7.js",
+      "static/chunks/app/installation-guide/page-892efec3c7df8dde.js"
+    ],
+    "/guides/page": [
+      "static/chunks/webpack-c81f7fd28659d64f.js",
+      "static/chunks/fd9d1056-06fe44696aec3f50.js",
+      "static/chunks/117-80b09a1b7c4264e1.js",
+      "static/chunks/main-app-4a043f54497f34ba.js",
+      "static/chunks/151-3f15f459f769c6b7.js",
+      "static/chunks/app/guides/page-c1251e1adc63bbed.js"
+    ],
+    "/iptv-firestick-subscription-uk/page": [
+      "static/chunks/webpack-c81f7fd28659d64f.js",
+      "static/chunks/fd9d1056-06fe44696aec3f50.js",
+      "static/chunks/117-80b09a1b7c4264e1.js",
+      "static/chunks/main-app-4a043f54497f34ba.js",
+      "static/chunks/151-3f15f459f769c6b7.js",
+      "static/chunks/app/iptv-firestick-subscription-uk/page-0217841578168e61.js"
+    ],
+    "/iptv-uk-free-trial/page": [
+      "static/chunks/webpack-c81f7fd28659d64f.js",
+      "static/chunks/fd9d1056-06fe44696aec3f50.js",
+      "static/chunks/117-80b09a1b7c4264e1.js",
+      "static/chunks/main-app-4a043f54497f34ba.js",
+      "static/chunks/151-3f15f459f769c6b7.js",
+      "static/chunks/app/iptv-uk-free-trial/page-7c5c7e92867773b1.js"
+    ],
+    "/privacy/page": [
+      "static/chunks/webpack-c81f7fd28659d64f.js",
+      "static/chunks/fd9d1056-06fe44696aec3f50.js",
+      "static/chunks/117-80b09a1b7c4264e1.js",
+      "static/chunks/main-app-4a043f54497f34ba.js",
+      "static/chunks/151-3f15f459f769c6b7.js",
+      "static/chunks/763-2310a1ca99e0c8bf.js",
+      "static/chunks/app/privacy/page-4014f311992d98f0.js"
     ],
     "/page": [
       "static/chunks/webpack-c81f7fd28659d64f.js",
@@ -40,21 +107,14 @@
       "static/chunks/454-c572df15aae36a72.js",
       "static/chunks/app/page-4b3853dd4377ee11.js"
     ],
-    "/privacy/page": [
+    "/status/page": [
       "static/chunks/webpack-c81f7fd28659d64f.js",
       "static/chunks/fd9d1056-06fe44696aec3f50.js",
       "static/chunks/117-80b09a1b7c4264e1.js",
       "static/chunks/main-app-4a043f54497f34ba.js",
       "static/chunks/151-3f15f459f769c6b7.js",
-      "static/chunks/app/privacy/page-f924c1b5b5f4380f.js"
-    ],
-    "/pricing/page": [
-      "static/chunks/webpack-c81f7fd28659d64f.js",
-      "static/chunks/fd9d1056-06fe44696aec3f50.js",
-      "static/chunks/117-80b09a1b7c4264e1.js",
-      "static/chunks/main-app-4a043f54497f34ba.js",
-      "static/chunks/151-3f15f459f769c6b7.js",
-      "static/chunks/app/pricing/page-c0f963f23f7ba0de.js"
+      "static/chunks/763-2310a1ca99e0c8bf.js",
+      "static/chunks/app/status/page-069a421e12af2579.js"
     ],
     "/refund/page": [
       "static/chunks/webpack-c81f7fd28659d64f.js",
@@ -62,15 +122,8 @@
       "static/chunks/117-80b09a1b7c4264e1.js",
       "static/chunks/main-app-4a043f54497f34ba.js",
       "static/chunks/151-3f15f459f769c6b7.js",
-      "static/chunks/app/refund/page-816c38ddd6ab1cc3.js"
-    ],
-    "/status/page": [
-      "static/chunks/webpack-c81f7fd28659d64f.js",
-      "static/chunks/fd9d1056-06fe44696aec3f50.js",
-      "static/chunks/117-80b09a1b7c4264e1.js",
-      "static/chunks/main-app-4a043f54497f34ba.js",
-      "static/chunks/151-3f15f459f769c6b7.js",
-      "static/chunks/app/status/page-3dd379d5e0d9592e.js"
+      "static/chunks/763-2310a1ca99e0c8bf.js",
+      "static/chunks/app/refund/page-9c74baf576327da9.js"
     ],
     "/terms/page": [
       "static/chunks/webpack-c81f7fd28659d64f.js",
@@ -78,63 +131,16 @@
       "static/chunks/117-80b09a1b7c4264e1.js",
       "static/chunks/main-app-4a043f54497f34ba.js",
       "static/chunks/151-3f15f459f769c6b7.js",
-      "static/chunks/app/terms/page-97328471e44279d7.js"
+      "static/chunks/763-2310a1ca99e0c8bf.js",
+      "static/chunks/app/terms/page-f4ed3bb66009ba85.js"
     ],
-    "/installation-guide/page": [
+    "/pricing/page": [
       "static/chunks/webpack-c81f7fd28659d64f.js",
       "static/chunks/fd9d1056-06fe44696aec3f50.js",
       "static/chunks/117-80b09a1b7c4264e1.js",
       "static/chunks/main-app-4a043f54497f34ba.js",
       "static/chunks/151-3f15f459f769c6b7.js",
-      "static/chunks/app/installation-guide/page-50c108e26d8e2f7c.js"
-    ],
-    "/[guideSlug]/page": [
-      "static/chunks/webpack-c81f7fd28659d64f.js",
-      "static/chunks/fd9d1056-06fe44696aec3f50.js",
-      "static/chunks/117-80b09a1b7c4264e1.js",
-      "static/chunks/main-app-4a043f54497f34ba.js",
-      "static/chunks/151-3f15f459f769c6b7.js",
-      "static/chunks/app/[guideSlug]/page-c0e6da4599ee61c3.js"
-    ],
-    "/iptv-firestick-subscription-uk/page": [
-      "static/chunks/webpack-c81f7fd28659d64f.js",
-      "static/chunks/fd9d1056-06fe44696aec3f50.js",
-      "static/chunks/117-80b09a1b7c4264e1.js",
-      "static/chunks/main-app-4a043f54497f34ba.js",
-      "static/chunks/151-3f15f459f769c6b7.js",
-      "static/chunks/app/iptv-firestick-subscription-uk/page-afab3cbbc630aebd.js"
-    ],
-    "/iptv-for-android-tv-uk/page": [
-      "static/chunks/webpack-c81f7fd28659d64f.js",
-      "static/chunks/fd9d1056-06fe44696aec3f50.js",
-      "static/chunks/117-80b09a1b7c4264e1.js",
-      "static/chunks/main-app-4a043f54497f34ba.js",
-      "static/chunks/151-3f15f459f769c6b7.js",
-      "static/chunks/app/iptv-for-android-tv-uk/page-bd0b5273ce84d134.js"
-    ],
-    "/iptv-for-pc-uk/page": [
-      "static/chunks/webpack-c81f7fd28659d64f.js",
-      "static/chunks/fd9d1056-06fe44696aec3f50.js",
-      "static/chunks/117-80b09a1b7c4264e1.js",
-      "static/chunks/main-app-4a043f54497f34ba.js",
-      "static/chunks/151-3f15f459f769c6b7.js",
-      "static/chunks/app/iptv-for-pc-uk/page-619f70ecaa035185.js"
-    ],
-    "/iptv-uk-free-trial/page": [
-      "static/chunks/webpack-c81f7fd28659d64f.js",
-      "static/chunks/fd9d1056-06fe44696aec3f50.js",
-      "static/chunks/117-80b09a1b7c4264e1.js",
-      "static/chunks/main-app-4a043f54497f34ba.js",
-      "static/chunks/151-3f15f459f769c6b7.js",
-      "static/chunks/app/iptv-uk-free-trial/page-1d1564f2f4c06191.js"
-    ],
-    "/guides/page": [
-      "static/chunks/webpack-c81f7fd28659d64f.js",
-      "static/chunks/fd9d1056-06fe44696aec3f50.js",
-      "static/chunks/117-80b09a1b7c4264e1.js",
-      "static/chunks/main-app-4a043f54497f34ba.js",
-      "static/chunks/151-3f15f459f769c6b7.js",
-      "static/chunks/app/guides/page-73596f14eb379d0f.js"
+      "static/chunks/app/pricing/page-e24c1fe786cee2d2.js"
     ]
   }
 }

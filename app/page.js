@@ -14,6 +14,13 @@ import TrustAndTestimonialsSection from '../components/sections/TrustAndTestimon
 import WhyChooseSection from '../components/sections/WhyChooseSection';
 import { getHomePageSchema } from '../lib/schema';
 
+export const metadata = {
+  title: 'IPTV UK | Best IPTV Subscription UK with Live TV, Sports & 4K Streaming',
+  description:
+    'Premium IPTV subscription UK from £14.99. Thousands of live TV channels, Sky Sports, TNT Sports, movies and series in HD and 4K on Firestick, Smart TV, Android, iPhone and PC. Free 24-hour trial.',
+  alternates: { canonical: '/' }
+};
+
 export default function HomePage() {
   return (
     <main className="bg-white text-slate-900">

@@ -1,15 +1,15 @@
 import Link from 'next/link';
 
 const devices = [
-  'Amazon Firestick',
-  'Android TV',
-  'Smart TVs',
-  'Android Boxes',
-  'MAG Devices',
-  'iPhone & iPad',
-  'Android Smartphones',
-  'Windows PCs',
-  'Mac Computers'
+  { label: 'Amazon Firestick', href: '/iptv-firestick-subscription-uk' },
+  { label: 'Android TV', href: '/iptv-for-android-tv-uk' },
+  { label: 'Smart TVs', href: '/installation-guide' },
+  { label: 'Android Boxes', href: '/best-android-tv-box-iptv-uk' },
+  { label: 'MAG Devices', href: '/installation-guide' },
+  { label: 'iPhone & iPad', href: '/iptv-for-iphone-uk' },
+  { label: 'Android Smartphones', href: '/installation-guide' },
+  { label: 'Windows PCs', href: '/iptv-for-pc-uk' },
+  { label: 'Mac Computers', href: '/iptv-for-pc-uk' }
 ];
 
 export default function DevicesBanner() {
@@ -22,24 +22,15 @@ export default function DevicesBanner() {
           you choose.
         </p>
         <div className="flex flex-wrap justify-center gap-3">
-          {devices.map((device) =>
-            device === 'Amazon Firestick' ? (
-              <Link
-                key={device}
-                href="/iptv-firestick-subscription-uk"
-                className="rounded-full border border-white/40 bg-white/20 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide transition hover:bg-white/30"
-              >
-                {device}
-              </Link>
-            ) : (
-              <span
-                key={device}
-                className="rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide"
-              >
-                {device}
-              </span>
-            )
-          )}
+          {devices.map((device) => (
+            <Link
+              key={device.label}
+              href={device.href}
+              className="rounded-full border border-white/25 bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide transition hover:border-white/50 hover:bg-white/25"
+            >
+              {device.label}
+            </Link>
+          ))}
         </div>
       </div>
     </section>
