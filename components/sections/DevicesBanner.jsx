@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 const devices = [
   'Amazon Firestick',
   'Android TV',
@@ -20,14 +22,24 @@ export default function DevicesBanner() {
           you choose.
         </p>
         <div className="flex flex-wrap justify-center gap-3">
-          {devices.map((device) => (
-            <span
-              key={device}
-              className="rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide"
-            >
-              {device}
-            </span>
-          ))}
+          {devices.map((device) =>
+            device === 'Amazon Firestick' ? (
+              <Link
+                key={device}
+                href="/iptv-firestick-subscription-uk"
+                className="rounded-full border border-white/40 bg-white/20 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide transition hover:bg-white/30"
+              >
+                {device}
+              </Link>
+            ) : (
+              <span
+                key={device}
+                className="rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide"
+              >
+                {device}
+              </span>
+            )
+          )}
         </div>
       </div>
     </section>

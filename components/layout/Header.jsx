@@ -15,6 +15,7 @@ const trialWhatsAppHref = getWhatsAppLink("Hi, I'd like to claim my 24 Hours Fre
 const links = [
   { label: 'Home', href: '/' },
   { label: 'Channels', href: '/channels' },
+  { label: 'Firestick', href: '/iptv-firestick-subscription-uk' },
   { label: 'Installation Guide', href: '/installation-guide' },
   {
     label: 'Guides',
@@ -28,7 +29,7 @@ const links = [
   { label: 'Services', href: '/#services', secondary: true },
   { label: 'Features', href: '#features', secondary: true },
   { label: 'FAQ', href: '#faq', secondary: true },
-  { label: 'Contact', href: '/#contact' }
+  { label: 'Contact', href: '/#contact', secondary: true }
 ];
 
 export default function Header() {

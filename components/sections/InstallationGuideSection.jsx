@@ -45,7 +45,15 @@ const apps = [
 const setupGuides = [
   {
     title: 'Setting IPTV UK on Amazon Firestick',
-    intro: 'Firestick remains one of the most popular devices for IPTV streaming in the UK.',
+    intro: (
+      <>
+        Firestick remains one of the most popular devices for IPTV streaming in the UK. See our{' '}
+        <a href="/iptv-firestick-subscription-uk" className={whatsAppLinkClasses}>
+          IPTV Firestick subscription page
+        </a>{' '}
+        for supported models, plans and buffering fixes.
+      </>
+    ),
     label: 'Steps',
     accent: 'from-orange-500 to-amber-400',
     steps: [

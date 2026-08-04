@@ -10,7 +10,8 @@
   "/status/page": "app/status/page.js",
   "/terms/page": "app/terms/page.js",
   "/sitemap.xml/route": "app/sitemap.xml/route.js",
-  "/installation-guide/page": "app/installation-guide/page.js",
   "/[guideSlug]/page": "app/[guideSlug]/page.js",
+  "/iptv-firestick-subscription-uk/page": "app/iptv-firestick-subscription-uk/page.js",
+  "/installation-guide/page": "app/installation-guide/page.js",
   "/guides/page": "app/guides/page.js"
 }

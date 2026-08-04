@@ -155,3 +155,56 @@ export const installationFaqs = [
       "Recording support depends on your chosen player app — some apps, like IPTV Smarters, include a built-in recording feature, while others don't. Check your player's settings menu to see what's available on your device."
   }
 ];
+
+export const firestickFaqs = [
+  {
+    question: 'What Is an IPTV Firestick Subscription?',
+    answer:
+      'An IPTV Firestick subscription gives you login details that work inside a compatible player app on your Amazon Fire TV Stick. Your Firestick handles the app and the picture, while the subscription supplies the live channels, sports, films, and series over your broadband connection. You do not need a satellite dish, an aerial, or a separate set-top box.'
+  },
+  {
+    question: 'Which Firestick Models Work with IPTV UK?',
+    answer:
+      'Every current Amazon Fire TV device works, including the Fire TV Stick HD, Fire TV Stick 4K, Fire TV Stick 4K Max, Fire TV Cube, and Fire TV built into some televisions. Older second and third generation sticks also work, though menus and large programme guides load more slowly on them. For 4K streaming you need a 4K model paired with a 4K television.'
+  },
+  {
+    question: 'Do I Need to Jailbreak My Firestick to Use IPTV?',
+    answer:
+      'No. Nothing needs to be unlocked, rooted, or modified. You only turn on the standard "Apps from Unknown Sources" setting that Amazon includes in Developer Options, which lets you install a player through the Downloader app. Your Firestick keeps its warranty, its Amazon account, and all its normal apps.'
+  },
+  {
+    question: 'How Long Does Firestick Setup Take?',
+    answer:
+      'Most customers are watching within about ten minutes. Enabling Developer Options and installing Downloader takes a few minutes, installing the player takes another minute or two, and your channels and programme guide then load in the background. A large channel list can take a little longer to import the first time.'
+  },
+  {
+    question: 'What Internet Speed Do I Need for IPTV on Firestick?',
+    answer:
+      'Around 10 Mbps is comfortable for HD, 25 Mbps for 4K, and more if several people stream at once. Stability matters more than headline speed. A connection that holds steady at 20 Mbps performs better than one that swings between 5 and 60 Mbps, because live television cannot buffer far ahead the way on-demand video does.'
+  },
+  {
+    question: 'Why Is My Firestick Buffering on IPTV?',
+    answer:
+      'Wi-Fi is the usual cause. A Firestick sits behind your television, which blocks the signal, so move the router closer, use the supplied HDMI extender, or add an Ethernet adapter. Also clear the player cache, close background apps, and restart the stick. If only one channel stutters while the rest play cleanly, the problem is that stream rather than your setup.'
+  },
+  {
+    question: 'Can I Use One Subscription on a Firestick and Another Device?',
+    answer:
+      'You can save your details on more than one device, but how many can play at the same time depends on the connection limit included in your plan. Message our support team on WhatsApp if you need more simultaneous streams and we will tell you what your plan allows.'
+  },
+  {
+    question: 'Will IPTV Slow Down or Damage My Firestick?',
+    answer:
+      'No. A player app behaves like any other Fire TV app. Storage is the only practical limit, since a Firestick has a small amount of internal space and cached programme guide data builds up over time. Clearing the cache occasionally keeps menus responsive.'
+  },
+  {
+    question: 'Can I Take My Firestick Away with Me?',
+    answer:
+      'Yes. A Firestick is pocket sized and works on any television with an HDMI port and a usable internet connection, which makes it convenient for holiday homes, caravans, and hotel rooms. Public and hotel Wi-Fi networks with sign-in pages can be unreliable for live streaming, so a mobile hotspot is often steadier.'
+  },
+  {
+    question: 'How Do I Get My Firestick IPTV Login Details?',
+    answer:
+      'Choose a plan and message us on WhatsApp. We send your login details directly to you, along with the setup code for the recommended player. Keep those details private, because anyone who has them can use your subscription.'
+  }
+];

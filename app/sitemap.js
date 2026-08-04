@@ -5,6 +5,7 @@ const SITE_URL = 'https://www.iptvuk.buzz';
 const staticRoutes = [
   { path: '', priority: 1 },
   { path: '/pricing', priority: 0.9 },
+  { path: '/iptv-firestick-subscription-uk', priority: 0.9 },
   { path: '/channels', priority: 0.8 },
   { path: '/installation-guide', priority: 0.8 },
   { path: '/guides', priority: 0.8 },
