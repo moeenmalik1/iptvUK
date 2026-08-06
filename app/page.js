@@ -10,6 +10,7 @@ import HeroSection from '../components/sections/HeroSection';
 import PerformanceSection from '../components/sections/PerformanceSection';
 import PlanComparisonSection from '../components/sections/PlanComparisonSection';
 import PricingSection from '../components/sections/PricingSection';
+import ReviewsSection from '../components/sections/ReviewsSection';
 import TrustAndTestimonialsSection from '../components/sections/TrustAndTestimonialsSection';
 import WhyChooseSection from '../components/sections/WhyChooseSection';
 import { getHomePageSchema } from '../lib/schema';
@@ -39,6 +40,7 @@ export default function HomePage() {
       <PerformanceSection />
       <GuidesSection />
       <FaqSection />
+      <ReviewsSection />
       <TrustAndTestimonialsSection />
       <ContactSection />
       <Footer />
