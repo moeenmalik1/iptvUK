@@ -3,5 +3,5 @@ Allow: /
 Disallow: /api/
 Disallow: /_next/static/chunks/
 
-Host: https://www.iptvuk.buzz
-Sitemap: https://www.iptvuk.buzz/sitemap.xml
+Host: https://iptvuk.buzz
+Sitemap: https://iptvuk.buzz/sitemap.xml

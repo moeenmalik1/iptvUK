@@ -1,7 +1,7 @@
 import { devices } from '../data/devices';
+import { SITE_URL } from '../lib/seo';
 import { guideHref, guides } from '../data/guides';
 
-const SITE_URL = 'https://www.iptvuk.buzz';
 
 const staticRoutes = [
   { path: '', priority: 1 },
