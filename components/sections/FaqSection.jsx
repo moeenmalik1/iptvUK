@@ -3,7 +3,7 @@ import { homeFaqs as faqs } from '../../data/faqs';
 
 export default function FaqSection() {
   return (
-    <section className="bg-slate-100 py-16">
+    <section id="faq" className="scroll-mt-24 bg-slate-100 py-16">
       <div className="mx-auto w-full max-w-4xl px-4 sm:px-6 lg:px-8">
         <SectionHeading title="Frequently Asked Questions" subtitle="Answers to the most common questions about IPTV UK." />
         <div className="mt-8 space-y-3">

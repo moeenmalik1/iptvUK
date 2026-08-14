@@ -9,7 +9,7 @@ const devices = [
   { label: 'iPhone & iPad', href: '/iptv-for-iphone-uk' },
   { label: 'Android Smartphones', href: '/installation-guide' },
   { label: 'Windows PCs', href: '/iptv-for-pc-uk' },
-  { label: 'Mac Computers', href: '/iptv-for-pc-uk' }
+  { label: 'Mac Computers', href: '/iptv-for-mac-uk' }
 ];
 
 export default function DevicesBanner() {

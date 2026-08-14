@@ -2,6 +2,7 @@ import Footer from '../../components/layout/Footer';
 import Header from '../../components/layout/Header';
 import FirestickSection from '../../components/sections/FirestickSection';
 import { getFirestickPageSchema } from '../../lib/schema';
+import { OG_IMAGE, openGraphFor } from '../../lib/seo';
 
 export const metadata = {
   title: 'IPTV Firestick Subscription UK | Live TV, Sports & 4K on Amazon Fire TV',
@@ -10,14 +11,13 @@ export const metadata = {
   alternates: {
     canonical: '/iptv-firestick-subscription-uk'
   },
-  openGraph: {
-    type: 'website',
+  openGraph: openGraphFor({
     title: 'IPTV Firestick Subscription UK | Live TV, Sports & 4K on Amazon Fire TV',
     description:
       'Turn the Fire TV Stick you already own into a full live television service. UK channels, sport, films and box sets from £14.99, with a free 24-hour trial.',
     url: '/iptv-firestick-subscription-uk',
-    images: ['/images/firestick-iptv.svg']
-  }
+    images: [OG_IMAGE]
+  })
 };
 
 export default function FirestickPage() {

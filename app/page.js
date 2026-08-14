@@ -13,12 +13,19 @@ import PricingSection from '../components/sections/PricingSection';
 import TrustAndTestimonialsSection from '../components/sections/TrustAndTestimonialsSection';
 import WhyChooseSection from '../components/sections/WhyChooseSection';
 import { getHomePageSchema } from '../lib/schema';
+import { openGraphFor } from '../lib/seo';
 
 export const metadata = {
   title: 'IPTV UK | Best IPTV Subscription UK with Live TV, Sports & 4K Streaming',
   description:
     'Premium IPTV subscription UK from £14.99. Thousands of live TV channels, Sky Sports, TNT Sports, movies and series in HD and 4K on Firestick, Smart TV, Android, iPhone and PC. Free 24-hour trial.',
-  alternates: { canonical: '/' }
+  alternates: { canonical: '/' },
+  openGraph: openGraphFor({
+    title: 'IPTV UK | Best IPTV Subscription UK with Live TV, Sports & 4K Streaming',
+    description:
+      'Premium IPTV subscription UK from £14.99. Thousands of live channels, Sky Sports, TNT Sports, films and box sets in HD and 4K, with a free 24-hour trial.',
+    url: '/'
+  })
 };
 
 export default function HomePage() {

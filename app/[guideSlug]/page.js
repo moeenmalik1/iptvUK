@@ -4,6 +4,7 @@ import Header from '../../components/layout/Header';
 import GuideLayout from '../../components/guides/GuideLayout';
 import { getGuide, getRelatedGuides, guideHref, guides } from '../../data/guides';
 import { getGuideSchema } from '../../lib/schema';
+import { OG_IMAGE, openGraphFor } from '../../lib/seo';
 
 // Only the known guide slugs resolve through this root-level segment; anything
 // else falls through to the 404 page instead of being caught here.
@@ -26,14 +27,14 @@ export function generateMetadata({ params }) {
     alternates: {
       canonical: guideHref(guide.slug)
     },
-    openGraph: {
+    openGraph: openGraphFor({
       type: 'article',
       title: guide.metaTitle,
       description: guide.metaDescription,
       url: guideHref(guide.slug),
-      images: [guide.image],
+      images: [OG_IMAGE],
       modifiedTime: guide.updatedIso
-    }
+    })
   };
 }
 

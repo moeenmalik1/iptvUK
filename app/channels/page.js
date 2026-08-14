@@ -1,5 +1,6 @@
 import ChannelsClient from './ChannelsClient';
 import { getChannelsPageSchema } from '../../lib/schema';
+import { openGraphFor } from '../../lib/seo';
 
 const schemaCategories = [
   'UK entertainment channels',
@@ -17,13 +18,12 @@ export const metadata = {
   description:
     'Browse the full IPTV UK channel list. Sky Sports, TNT Sports, Sky Cinema, UK entertainment, news, kids and international channels in HD, Full HD and 4K, plus movies and series on demand.',
   alternates: { canonical: '/channels' },
-  openGraph: {
-    type: 'website',
+  openGraph: openGraphFor({
     title: 'IPTV UK Channel List | Live Sports, Movies & Entertainment Channels',
     description:
       'Every live TV, sports, movie and entertainment channel included with an IPTV UK subscription.',
     url: '/channels'
-  }
+  })
 };
 
 export default function ChannelsPage() {

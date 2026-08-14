@@ -1,11 +1,18 @@
 import TermsClient from './TermsClient';
 import { getSimplePageSchema } from '../../lib/schema';
+import { openGraphFor } from '../../lib/seo';
 
 export const metadata = {
   title: 'Terms & Conditions | IPTV UK Subscription Terms',
   description:
     'The terms and conditions covering your IPTV UK subscription, including account use, device limits, payment and acceptable use.',
   alternates: { canonical: '/terms' },
+  openGraph: openGraphFor({
+    title: 'Terms & Conditions | IPTV UK Subscription Terms',
+    description:
+      'The terms and conditions covering your IPTV UK subscription, including account use, device limits, payment and acceptable use.',
+    url: '/terms'
+  }),
   robots: { index: true, follow: true }
 };
 

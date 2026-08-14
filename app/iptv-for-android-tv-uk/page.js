@@ -3,6 +3,7 @@ import Header from '../../components/layout/Header';
 import DevicePage from '../../components/devices/DevicePage';
 import { androidTvDevice as device } from '../../data/devices/android-tv';
 import { getDevicePageSchema } from '../../lib/schema';
+import { OG_IMAGE, openGraphFor } from '../../lib/seo';
 
 export const metadata = {
   title: device.metaTitle,
@@ -10,13 +11,12 @@ export const metadata = {
   alternates: {
     canonical: `/${device.slug}`
   },
-  openGraph: {
-    type: 'website',
+  openGraph: openGraphFor({
     title: device.metaTitle,
     description: device.metaDescription,
     url: `/${device.slug}`,
-    images: [device.image]
-  }
+    images: [OG_IMAGE]
+  })
 };
 
 export default function Page() {

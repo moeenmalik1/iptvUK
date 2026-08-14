@@ -6,19 +6,19 @@ import { plans } from '../../data/plans';
 import { pricingFaqs as faqs } from '../../data/faqs';
 import { getWhatsAppLink } from '../../lib/whatsapp';
 import { getPricingPageSchema } from '../../lib/schema';
+import { openGraphFor } from '../../lib/seo';
 
 export const metadata = {
   title: 'IPTV Subscription UK Prices | Plans from £14.99 with Free Trial',
   description:
     'IPTV subscription UK pricing. Compare 1, 3, 6 and 12 month plans from £14.99 with live TV, sports, movies, 4K streaming and multi-device support. Free 24-hour trial, no auto-renewal.',
   alternates: { canonical: '/pricing' },
-  openGraph: {
-    type: 'website',
+  openGraph: openGraphFor({
     title: 'IPTV Subscription UK Prices | Plans from £14.99',
     description:
       'Compare IPTV UK subscription plans from £14.99. Live TV, sports, movies and 4K on every device, with a free 24-hour trial.',
     url: '/pricing'
-  }
+  })
 };
 
 const includedItems = [

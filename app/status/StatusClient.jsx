@@ -32,7 +32,7 @@ export default function StatusClient() {
               <Activity className="h-3.5 w-3.5" /> All Systems Operational
             </span>
             <h1 className="mt-4 text-4xl font-black tracking-tight text-white">
-              System &amp; Service Status
+              IPTV UK Service Status
             </h1>
             <p className="mt-3 text-slate-300 text-sm leading-relaxed">
               We monitor our IPTV streaming servers and network status around the clock. Below is a real-time status overview of our channels, VOD libraries, and gateway services.

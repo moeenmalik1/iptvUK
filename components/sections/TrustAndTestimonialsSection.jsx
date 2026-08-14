@@ -11,7 +11,7 @@ const highlights = [
 
 export default function TrustAndTestimonialsSection() {
   return (
-    <section className="bg-white py-16">
+    <section id="reviews" className="scroll-mt-24 bg-white py-16">
       <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
           title="Start Streaming with IPTV UK Today"

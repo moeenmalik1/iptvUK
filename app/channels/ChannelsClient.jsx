@@ -97,7 +97,7 @@ export default function ChannelsClient() {
               <Flame className="h-3.5 w-3.5" /> Live IPTV Channels & VOD
             </span>
             <h1 className="mt-4 text-4xl font-black tracking-tight text-white sm:text-5xl">
-              Browse Available Channels
+              IPTV UK Channel List
             </h1>
             <p className="mt-3 text-slate-300 text-sm sm:text-base leading-relaxed">
               Explore the channels available with your IPTV UK subscription. Type a channel name or browse by category. Enjoy premium streaming with 99.9% uptime.

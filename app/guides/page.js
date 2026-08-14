@@ -5,6 +5,7 @@ import GuideCard from '../../components/guides/GuideCard';
 import RelatedLinks from '../../components/layout/RelatedLinks';
 import { guides } from '../../data/guides';
 import { getGuidesIndexSchema } from '../../lib/schema';
+import { openGraphFor } from '../../lib/seo';
 
 export const metadata = {
   title: 'IPTV Guides UK | Boxes, Setup, Sport & Pay TV Costs Compared',
@@ -12,7 +13,13 @@ export const metadata = {
     'Practical IPTV guides for UK viewers: the best Android TV boxes, iPhone setup, watching Sky Sports without Sky, cancelling Sky TV, and IPTV compared with Netflix.',
   alternates: {
     canonical: '/guides'
-  }
+  },
+  openGraph: openGraphFor({
+    title: 'IPTV Guides UK | Boxes, Setup, Sport & Pay TV Costs Compared',
+    description:
+      'Practical IPTV guides for UK viewers: Android TV boxes, device setup, watching Sky Sports without Sky, cancelling Sky TV and IPTV compared with Netflix.',
+    url: '/guides'
+  })
 };
 
 const categories = [...new Set(guides.map((guide) => guide.category))];
@@ -33,7 +40,7 @@ export default function GuidesPage() {
         <div className="relative mx-auto w-full max-w-6xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
           <p className="text-xs font-bold uppercase tracking-[0.35em] text-orange-300">IPTV UK Guides</p>
           <h1 className="mt-4 max-w-4xl text-4xl font-black tracking-tight sm:text-5xl lg:text-6xl">
-            Straight answers before you buy a box, a plan, or another subscription.
+            IPTV Guides UK: straight answers before you buy a box, a plan, or another subscription.
           </h1>
           <p className="mt-6 max-w-3xl text-base leading-7 text-slate-300 sm:text-lg">
             Hardware comparisons, setup walkthroughs and honest cost breakdowns written for UK viewers. Every guide
