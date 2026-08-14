@@ -1,0 +1,221 @@
+export const smartTvDevice = {
+  slug: 'iptv-for-smart-tv-uk',
+  navLabel: 'IPTV for Smart TV',
+  breadcrumb: 'Smart TV',
+  title: 'IPTV for Smart TV',
+  heading: 'IPTV for Samsung, LG and Sony Smart TVs',
+  badge: 'Samsung Tizen & LG webOS',
+  metaTitle: 'IPTV for Smart TV UK | Samsung, LG & Sony Setup Guide',
+  metaDescription:
+    'IPTV on a Smart TV in the UK. Setup for Samsung Tizen and LG webOS, which app to use now Smart IPTV has gone from the Samsung store, MAC address activation, Sony and Philips sets, and buffering fixes. Free 24-hour trial.',
+  image: '/images/devices/iptv-smart-tv.svg',
+  imageAlt: 'Samsung and LG Smart TV showing an IPTV channel list and programme guide',
+  trialMessage: "Hi, I'd like to claim my 24 Hours Free Trial for my Smart TV.",
+  setupMessage: 'Hi, I need help setting up IPTV on my Smart TV.',
+  planContext: 'my Smart TV',
+  plansTitle: 'IPTV plans for Smart TVs',
+  faqTitle: 'IPTV on Smart TV: frequently asked questions',
+
+  intro: [
+    'If your television already runs Samsung Tizen or LG webOS, you do not need a Firestick, an Android box or anything else plugged into the back of it. The player installs on the television itself, and the channel list, programme guide and on-demand library load straight onto the screen you already own.',
+    'Smart TV setup differs from every other device in one respect: the television is identified by its MAC address rather than a username you type in. That sounds fiddly and is actually easier — you read one code off the screen, send it to us, and we load your playlist from our end.'
+  ],
+  stats: [
+    { value: 'No box', label: 'Nothing to plug in' },
+    { value: 'Tizen & webOS', label: 'Samsung and LG' },
+    { value: '10 min', label: 'Typical setup' },
+    { value: 'From £14.99', label: 'Plans' }
+  ],
+
+  why: {
+    eyebrow: 'Why the TV itself',
+    title: 'Why run IPTV on the television rather than a streaming stick',
+    intro:
+      'A Firestick is the right answer for an older television. If yours is a recent Samsung or LG, running the player natively is simpler and usually smoother.',
+    items: [
+      {
+        title: 'One remote, one input',
+        body: 'No switching to HDMI 2, no second remote on the arm of the sofa, no household confusion about which box does what. Live TV sits alongside the apps you already use.'
+      },
+      {
+        title: 'The panel gets the full picture',
+        body: 'Playing on the television avoids a second decode-and-re-encode step through an external stick. On a 4K set with a 4K feed, native playback is the shorter path.'
+      },
+      {
+        title: 'Nothing extra to buy or power',
+        body: 'No stick, no adapter, no extra plug behind the unit. If the television is already on your network, the setup cost is zero.'
+      },
+      {
+        title: 'Ethernet is usually already there',
+        body: 'Most Smart TVs include a wired network port, which streaming sticks generally do not. For live sport on a busy home network that is worth more than any other single change.'
+      }
+    ]
+  },
+
+  table: {
+    eyebrow: 'Compatibility',
+    title: 'Which Smart TVs work?',
+    intro:
+      'Almost any Smart TV sold in the UK from about 2017 onwards will run an IPTV player. What changes between brands is which app you use and how it is installed.',
+    headers: ['Television', 'System', 'Verdict', 'Notes'],
+    rows: [
+      [
+        'Samsung (2017 onwards)',
+        'Tizen',
+        'Works well',
+        'Samsung removed the original Smart IPTV app from its UK store, so we set customers up with an alternative that is still listed. Activation is by MAC address, which you read off the app.'
+      ],
+      [
+        'LG (2018 onwards)',
+        'webOS',
+        'Easiest setup',
+        'The LG Content Store still lists suitable players, so installation is a normal app install with nothing to sideload. webOS 4.0 and above gets the full feature set.'
+      ],
+      [
+        'Sony, Philips, TCL, Hisense',
+        'Android/Google TV',
+        'Best of the lot',
+        'These are Android TVs in a television case, so players install from the Play Store. Follow our Android TV guide rather than this page.'
+      ],
+      [
+        'Samsung and LG before 2016',
+        'Legacy Tizen/webOS',
+        'Hit and miss',
+        'Older app stores often no longer carry a working player, and the hardware struggles with large channel lists. A Firestick plugged into the same set is the cheaper fix.'
+      ],
+      [
+        'Panasonic, Toshiba, Sharp',
+        'My Home Screen / Vidaa',
+        'Varies',
+        'Some models carry a compatible player and some do not. Message us with the model number before you buy and we will tell you honestly whether it will work.'
+      ],
+      [
+        'Any TV with an HDMI port',
+        'Any',
+        'Always works',
+        'If the television itself cannot run a player, a Firestick or Android box in the HDMI port gives you the identical channel list for around £40.'
+      ]
+    ]
+  },
+
+  setup: {
+    title: 'How to install IPTV on a Samsung or LG Smart TV',
+    intro:
+      'The steps are the same on both platforms. You install a player, read a code off the screen, and send it to us — you never type a long server address with a TV remote.',
+    steps: [
+      {
+        title: 'Open your TV’s app store',
+        body: 'On Samsung that is the Smart Hub; on LG it is the LG Content Store. Search for an IPTV player. Message us first and we will tell you exactly which app to install for your model, because the listings differ between brands and change over time.'
+      },
+      {
+        title: 'Install it and open it once',
+        body: 'Install like any other app, then open it. On first launch the player displays a MAC address and, on most apps, a device key. Leave that screen showing.'
+      },
+      {
+        title: 'Send us the MAC address',
+        body: 'Send the MAC address and device key to us on WhatsApp. We load your playlist onto that device from our end. This is why Smart TV setup is quicker than it sounds — there is nothing to type on the television.'
+      },
+      {
+        title: 'Restart the app',
+        body: 'Once we confirm, close the player completely and reopen it. Your channels, categories and programme guide import automatically. Give the guide a few minutes to finish loading the first time.'
+      },
+      {
+        title: 'Test before you commit',
+        body: 'Play a live channel, then something on demand. Check that the guide matches what is actually on and that channel switching feels quick. Tell us about anything odd while the trial is still running.'
+      }
+    ],
+    requirements: [
+      'A Samsung or LG Smart TV from roughly 2017 onwards',
+      'The television connected to your home network',
+      'Broadband of roughly 10 Mbps or more',
+      'Your IPTV UK login or device key',
+      'About ten minutes'
+    ],
+    speeds: [
+      ['SD channels', '5 Mbps'],
+      ['HD channels', '10 Mbps'],
+      ['4K channels', '25 Mbps'],
+      ['Two TVs at once', '35 Mbps+']
+    ]
+  },
+
+  troubleshoot: {
+    title: 'Fixing IPTV problems on a Smart TV',
+    intro:
+      'Smart TV problems are nearly always the app store, the network, or a MAC address that has changed. Work through these before assuming the service is at fault.',
+    items: [
+      {
+        title: 'The app is not in the store',
+        body: 'App availability changes, and Samsung in particular has removed players that used to be listed. Do not sideload something you found on a forum — message us and we will tell you which player is currently working on your model.'
+      },
+      {
+        title: 'It worked, then stopped after a reset',
+        body: 'A factory reset or a change between Wi-Fi and Ethernet can present a different MAC address, and your playlist is tied to the old one. Send us the new MAC address and we will move your subscription across.'
+      },
+      {
+        title: 'Buffering on Wi-Fi only',
+        body: 'Televisions often have weaker aerials than a phone sitting next to them. Move to the 5 GHz band, or run an Ethernet cable to the port on the back. This is the single most effective fix for live sport.'
+      },
+      {
+        title: 'The programme guide is empty',
+        body: 'The EPG imports separately from the channel list and takes a few minutes on first load. If it is still empty after ten minutes, close the app fully — not just back to the home screen — and reopen it.'
+      },
+      {
+        title: 'Menus have become sluggish',
+        body: 'Guide data builds up over weeks. Clear the app cache in your television’s app settings, or remove and reinstall the player. Reinstalling does not lose your subscription, because that is held against your MAC address at our end.'
+      },
+      {
+        title: 'One channel fails, everything else is fine',
+        body: 'That is the source, not your television. Send us the channel name rather than reinstalling anything.'
+      }
+    ]
+  },
+
+  faqs: [
+    {
+      question: 'Can I watch IPTV on a Samsung Smart TV?',
+      answer:
+        'Yes. Samsung televisions from around 2017 onwards run Tizen and will run an IPTV player installed from the Smart Hub. Samsung removed the original Smart IPTV app from its UK store, so message us and we will tell you which player is currently listed and working for your model rather than sending you to an app that no longer exists.'
+    },
+    {
+      question: 'Which IPTV app should I use on an LG Smart TV?',
+      answer:
+        'LG televisions running webOS 4.0 and above — broadly 2018 onwards — can install a suitable player straight from the LG Content Store, so there is nothing to sideload. We will confirm the current app for your model when you message us, because store listings change.'
+    },
+    {
+      question: 'Do I need a Firestick if I have a Smart TV?',
+      answer:
+        'Not if your television is a recent Samsung or LG, or a Sony or Philips running Android TV — the player installs on the television itself. A Firestick is worth it for sets from before about 2016, where the app store often no longer carries a working player and the hardware struggles with large channel lists.'
+    },
+    {
+      question: 'Why does the app ask for a MAC address?',
+      answer:
+        'Smart TV players identify the television by its MAC address instead of a username and password, which saves you typing a long server address with a remote. You read the code off the screen, send it to us, and we load your playlist onto that device from our end.'
+    },
+    {
+      question: 'Will IPTV work on my Sony or Philips TV?',
+      answer:
+        'Yes, and more easily than on Samsung or LG. Sony, Philips, TCL and Hisense sets generally run Android TV or Google TV, so players install from the Google Play Store like a normal app. Our Android TV page covers those sets specifically.'
+    },
+    {
+      question: 'Can I watch 4K on my Smart TV?',
+      answer:
+        'Yes, where the channel is broadcast in 4K and your television supports it. You will want around 25 Mbps of steady broadband. A 4K stream on a 1080p television still plays, just downscaled.'
+    },
+    {
+      question: 'My TV is from 2015. Will it work?',
+      answer:
+        'Possibly not. Older Tizen and webOS app stores frequently no longer list a working player, and older panels slow down badly with a few thousand channels loaded. A Firestick in the HDMI port is the cheaper and more reliable answer, and gives you exactly the same channel list.'
+    },
+    {
+      question: 'Can I use the same subscription on my TV and my phone?',
+      answer:
+        'You can save your details on as many devices as you like. How many can play at the same time depends on the connection limit on your plan, so tell us how many screens you need and we will confirm what your plan allows.'
+    }
+  ],
+
+  cta: {
+    title: 'Try IPTV UK on your Smart TV before you pay',
+    body: 'Start with a free 24-hour trial. Tell us your TV brand and model, we will confirm the right player, and you can test live channels and on demand during a busy evening. Choose a plan only once it works properly on your own set.'
+  }
+};

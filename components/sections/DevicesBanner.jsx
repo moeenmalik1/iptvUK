@@ -3,7 +3,7 @@ import Link from 'next/link';
 const devices = [
   { label: 'Amazon Firestick', href: '/iptv-firestick-subscription-uk' },
   { label: 'Android TV', href: '/iptv-for-android-tv-uk' },
-  { label: 'Smart TVs', href: '/installation-guide' },
+  { label: 'Smart TVs', href: '/iptv-for-smart-tv-uk' },
   { label: 'Android Boxes', href: '/best-android-tv-box-iptv-uk' },
   { label: 'MAG Devices', href: '/installation-guide' },
   { label: 'iPhone & iPad', href: '/iptv-for-iphone-uk' },

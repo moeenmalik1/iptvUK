@@ -261,3 +261,46 @@ export const freeTrialFaqs = [
       'Tell us what you are seeing before the trial expires. Most problems are a mistyped password, a player that has not finished importing the channel list, or Wi-Fi rather than the service itself. If we cannot get it working during your trial window, do not buy a plan.'
   }
 ];
+
+export const channelsFaqs = [
+  {
+    question: 'Does IPTV UK include Sky Sports and TNT Sports?',
+    answer:
+      'Yes. The line-up carries the full Sky Sports package — Main Event, Premier League, Football, Cricket, F1, Golf, Arena, Action and Sky Sports News — along with TNT Sports 1 to 4 and TNT Sports Ultimate. Sky Sports Box Office pay-per-view events are included at no extra charge on every plan, so boxing and wrestling nights do not carry a separate fee.'
+  },
+  {
+    question: 'Can I watch Premier League football?',
+    answer:
+      'Every televised Premier League fixture appears on Sky Sports, TNT Sports or Amazon in the UK, and the Sky and TNT channels are both in the line-up. Matches played outside the UK broadcast window are also carried on the international sports channels, which is how most subscribers watch fixtures that are not shown domestically.'
+  },
+  {
+    question: 'How many channels do I get?',
+    answer:
+      'The list on this page is a sample of the most-requested UK channels rather than the complete playlist, which is considerably larger once the international and on-demand categories are included. Start a free 24-hour trial and you will see the full guide loaded into your player, which is a more useful answer than a number on a sales page.'
+  },
+  {
+    question: 'Are the channels in HD or 4K?',
+    answer:
+      'Most UK channels are carried in Full HD, and the main sports, movie and flagship entertainment channels are available in 4K where the broadcaster provides a 4K feed. You will want roughly 10 Mbps of steady broadband for HD and about 25 Mbps for 4K.'
+  },
+  {
+    question: 'Is there a channel I can request?',
+    answer:
+      'Message us before you buy and we will confirm whether a specific channel is carried. That applies particularly to international and regional channels, where line-ups change more often than the UK ones.'
+  },
+  {
+    question: 'Do the channels come with a TV guide?',
+    answer:
+      'Yes. A full electronic programme guide loads into your player alongside the channel list, showing what is on now and next for the days ahead. It can take a few minutes to import the first time you sign in.'
+  },
+  {
+    question: 'Can I watch these channels on more than one TV?',
+    answer:
+      'Your details can be saved on as many devices as you like. How many can play at the same time depends on the connection limit on your plan, so tell us how many screens you need and we will confirm what your plan allows.'
+  },
+  {
+    question: 'What happens if a channel stops working?',
+    answer:
+      'If one channel fails while the rest play normally, that is the source rather than your setup. Send us the channel name on WhatsApp and we will get it restored. Check the service status page first if several channels are affected at once.'
+  }
+];
