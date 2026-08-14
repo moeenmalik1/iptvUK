@@ -1,4 +1,7 @@
 import { bestAndroidTvBox } from './best-android-tv-box';
+import { bestIptvUk } from './best-iptv-uk';
+import { iptvBufferingFix } from './iptv-buffering-fix';
+import { iptvSkySports } from './iptv-sky-sports';
 import { howToCancelSkyTv } from './how-to-cancel-sky-tv';
 import { iptvForIphone } from './iptv-for-iphone';
 import { iptvVsNetflix } from './iptv-vs-netflix';
@@ -8,11 +11,14 @@ import { guideHref, guideNav } from './nav';
 // Ordered as they appear on /guides. Add a new guide module here and it picks up
 // its own route, sitemap entry, structured data and related-guide links.
 export const guides = [
+  bestIptvUk,
+  iptvSkySports,
   bestAndroidTvBox,
   iptvForIphone,
   howToCancelSkyTv,
   iptvVsNetflix,
-  watchSkySportsWithoutSky
+  watchSkySportsWithoutSky,
+  iptvBufferingFix
 ];
 
 // Guides live at the site root (/best-android-tv-box-iptv-uk), matching the

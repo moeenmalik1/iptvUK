@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="A live football match on screen beside a sports channel list and fixture guide">
+  <defs>
+    <linearGradient id="bgS2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a"/><stop offset="0.55" stop-color="#1e293b"/><stop offset="1" stop-color="#0b1220"/>
+    </linearGradient>
+    <linearGradient id="scS2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f97316"/><stop offset="1" stop-color="#fbbf24"/>
+    </linearGradient>
+    <radialGradient id="glS2" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#22c55e" stop-opacity="0.32"/><stop offset="1" stop-color="#22c55e" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bgS2)"/>
+  <circle cx="290" cy="120" r="270" fill="url(#glS2)"/>
+  <circle cx="960" cy="530" r="240" fill="url(#glS2)" opacity="0.5"/>
+
+  <!-- pitch screen -->
+  <rect x="150" y="80" width="640" height="410" rx="20" fill="#020617" stroke="#334155" stroke-width="5"/>
+  <rect x="176" y="106" width="588" height="358" rx="10" fill="#052e16"/>
+  <!-- pitch markings -->
+  <rect x="176" y="106" width="588" height="358" rx="10" fill="none" stroke="#166534" stroke-width="3"/>
+  <line x1="470" y1="106" x2="470" y2="464" stroke="#166534" stroke-width="3"/>
+  <circle cx="470" cy="285" r="58" fill="none" stroke="#166534" stroke-width="3"/>
+  <rect x="176" y="196" width="72" height="178" fill="none" stroke="#166534" stroke-width="3"/>
+  <rect x="692" y="196" width="72" height="178" fill="none" stroke="#166534" stroke-width="3"/>
+  <circle cx="470" cy="285" r="10" fill="#f8fafc"/>
+
+  <!-- scorebug -->
+  <rect x="204" y="134" width="240" height="40" rx="8" fill="#0b1220" opacity="0.92"/>
+  <rect x="220" y="148" width="52" height="12" rx="5" fill="#e2e8f0"/>
+  <rect x="286" y="148" width="26" height="12" rx="5" fill="url(#scS2)"/>
+  <rect x="330" y="148" width="52" height="12" rx="5" fill="#e2e8f0"/>
+  <rect x="396" y="146" width="32" height="16" rx="6" fill="#1e293b"/>
+
+  <!-- LIVE pill -->
+  <rect x="640" y="134" width="104" height="32" rx="16" fill="#7f1d1d"/>
+  <circle cx="662" cy="150" r="6" fill="#f87171"/>
+  <rect x="678" y="144" width="48" height="12" rx="5" fill="#fecaca"/>
+
+  <!-- channel rail -->
+  <rect x="826" y="110" width="244" height="352" rx="16" fill="#111c2e" stroke="#1e293b" stroke-width="3"/>
+  <rect x="850" y="136" width="130" height="14" rx="6" fill="#475569"/>
+  <g>
+    <rect x="850" y="172" width="196" height="46" rx="8" fill="#16243a" stroke="#f97316" stroke-width="2"/>
+    <rect x="866" y="188" width="14" height="14" rx="3" fill="url(#scS2)"/>
+    <rect x="892" y="190" width="110" height="11" rx="5" fill="#cbd5e1"/>
+
+    <rect x="850" y="228" width="196" height="46" rx="8" fill="#0b1220" stroke="#1e293b" stroke-width="2"/>
+    <rect x="866" y="244" width="14" height="14" rx="3" fill="#38bdf8"/>
+    <rect x="892" y="246" width="132" height="11" rx="5" fill="#334155"/>
+
+    <rect x="850" y="284" width="196" height="46" rx="8" fill="#0b1220" stroke="#1e293b" stroke-width="2"/>
+    <rect x="866" y="300" width="14" height="14" rx="3" fill="#a78bfa"/>
+    <rect x="892" y="302" width="96" height="11" rx="5" fill="#334155"/>
+
+    <rect x="850" y="340" width="196" height="46" rx="8" fill="#0b1220" stroke="#1e293b" stroke-width="2"/>
+    <rect x="866" y="356" width="14" height="14" rx="3" fill="#34d399"/>
+    <rect x="892" y="358" width="120" height="11" rx="5" fill="#334155"/>
+
+    <rect x="850" y="396" width="196" height="46" rx="8" fill="#0b1220" stroke="#1e293b" stroke-width="2"/>
+    <rect x="866" y="412" width="14" height="14" rx="3" fill="#fbbf24"/>
+    <rect x="892" y="414" width="84" height="11" rx="5" fill="#334155"/>
+  </g>
+
+  <rect x="410" y="490" width="120" height="14" rx="6" fill="#1e293b"/>
+  <rect x="320" y="504" width="300" height="16" rx="8" fill="#334155"/>
+
+</svg>
